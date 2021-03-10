@@ -1,0 +1,3 @@
+Procesem, który może zostać opisany za pomocą problemu przepływowego jest przydzielanie zasobów przez scheduler. 
+
+Wówczas maszyną jest procesor, zadaniami odpowiednie rozdzielenie procesów, a operacjami przydzielenie do procesu czasu działania procesora.
