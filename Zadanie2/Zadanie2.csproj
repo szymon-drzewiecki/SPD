@@ -76,5 +76,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Silnik\Silnik.csproj">
+      <Project>{636fc9e7-ff45-4d91-a6c2-2eb6a0b2d988}</Project>
+      <Name>Silnik</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

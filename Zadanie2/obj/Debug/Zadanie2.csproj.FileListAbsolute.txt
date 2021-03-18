@@ -1,0 +1,9 @@
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\bin\Debug\Zadanie2.exe.config
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\bin\Debug\Zadanie2.exe
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\bin\Debug\Zadanie2.pdb
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\obj\Debug\Zadanie2.csprojAssemblyReference.cache
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\obj\Debug\Zadanie2.Properties.Resources.resources
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\obj\Debug\Zadanie2.csproj.GenerateResource.cache
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\obj\Debug\Zadanie2.csproj.CoreCompileInputs.cache
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\obj\Debug\Zadanie2.exe
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\obj\Debug\Zadanie2.pdb
