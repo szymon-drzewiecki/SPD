@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Silnik;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace Zadanie2
         public Form1()
         {
             InitializeComponent();
+
+            KolejkaZadan pz = new KolejkaZadan("neh_data.txt", 1);
         }
     }
 }
