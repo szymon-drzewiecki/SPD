@@ -10,15 +10,23 @@ namespace Silnik
     {
         private string[] dane;
 
-        //Inicjalizacja parsera wraz ze sciezka do pliku z ktorego maja byc
-        //odczytywane dane
+        /*
+         * Inicjalizacja parsera wraz ze sciezka do pliku z ktorego maja byc
+         * odczytywane dane.
+         * 
+         * sciezka - sciezka do pliku z danymi
+         */
         public Parser(string sciezka)
         {
             dane = System.IO.File.ReadAllLines(sciezka);
         }
 
-        //Zwrócenie tablicy zadan, ktore zawieraja w sobie odpowiednio 
-        //umiejscowione czasy poszczegolnych operacji na maszynach
+        /*
+         * Zwrócenie tablicy zadan, ktore zawieraja w sobie odpowiednio 
+         * umiejscowione czasy poszczegolnych operacji na maszynach
+         * 
+         * nrInstancji - numer instancji problemu, ktora trzeba wczytac
+         */
         public Zadanie[] OdczytajZadania(int nrInstancji)
         {
             Zadanie[] zadania = new Zadanie[3];
