@@ -17,7 +17,7 @@ namespace Zadanie2
         {
             InitializeComponent();
 
-            KolejkaZadan pz = new KolejkaZadan("neh_data.txt", 1);
+            KolejkaZadan kz = new KolejkaZadan("neh_data.txt", 1);
         }
     }
 }

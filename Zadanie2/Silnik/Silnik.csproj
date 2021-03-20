@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Algorytmy.cs" />
     <Compile Include="KolejkaZadan.cs" />
+    <Compile Include="Parser.cs" />
     <Compile Include="PrzegladZupelny.cs" />
     <Compile Include="Zadanie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

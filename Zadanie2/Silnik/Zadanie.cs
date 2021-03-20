@@ -8,7 +8,7 @@ namespace Silnik
 {
     public class Zadanie
     {
-        public int[] czasyOperacji;
+        private int[] czasyOperacji;
 
         public Zadanie(int liczbaMaszyn)
         {
@@ -21,11 +21,9 @@ namespace Silnik
                 czasyOperacji[i] = odczytaneCzasy[i];
         }
 
-        public void WypiszCzasy()
+        public int[] ZwrocCzasy()
         {
-            foreach (int czas in czasyOperacji)
-                Console.Write(czas + "|");
-            Console.WriteLine();
+            return czasyOperacji;
         }
     }
 }
