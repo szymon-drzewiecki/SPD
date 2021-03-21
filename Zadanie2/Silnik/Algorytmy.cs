@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Silnik
 {
-    class Algorytmy
+    public class Algorytmy
     {
     }
 }

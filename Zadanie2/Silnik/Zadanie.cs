@@ -8,13 +8,22 @@ namespace Silnik
 {
     public class Zadanie
     {
-        public int czasTrwania { get; set; }
-        public int numerZadania { get; set; }
+        private int[] czasyOperacji;
 
-        public Zadanie(int y, int x)
+        public Zadanie(int liczbaMaszyn)
         {
-            this.czasTrwania = y;
-            this.numerZadania = x;
+            czasyOperacji = new int[liczbaMaszyn];
+        }
+
+        public void UstawCzasy(int[] odczytaneCzasy)
+        {
+            for (int i = 0; i < odczytaneCzasy.Length; i++)
+                czasyOperacji[i] = odczytaneCzasy[i];
+        }
+
+        public int[] ZwrocCzasy()
+        {
+            return czasyOperacji;
         }
     }
 }

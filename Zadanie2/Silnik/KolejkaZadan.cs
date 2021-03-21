@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Silnik
 {
-    class KolejkaZadan
+    public class KolejkaZadan
     {
-        public List<Zadanie> listaZadan;
+        public Zadanie[] zadania;
 
-        public KolejkaZadan()
+        public KolejkaZadan(string sciezka, int nrInstancji)
         {
-            this.listaZadan = new List<Zadanie>();
+            Parser parser = new Parser(sciezka);
+            zadania = parser.OdczytajZadania(nrInstancji);
         }
     }
 }
