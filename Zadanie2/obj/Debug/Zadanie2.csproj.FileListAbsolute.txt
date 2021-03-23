@@ -19,3 +19,4 @@ C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\obj\Debug\Zadanie2.csproj.C
 C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\obj\Debug\Zadanie2.csproj.CopyComplete
 C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\obj\Debug\Zadanie2.exe
 C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\obj\Debug\Zadanie2.pdb
+C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\obj\Debug\Zadanie2.Form1.resources
