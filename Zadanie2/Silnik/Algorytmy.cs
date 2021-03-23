@@ -26,14 +26,23 @@ namespace Silnik
                 }
             }
 
-            int liczbaIteracji = liczbaZadan + liczbaMaszyn - 1;
-            List<int>[] Lista = new List<int>[liczbaIteracji];
-
-            for (int z = 0; z < liczbaIteracji; z++)
+            int[,] cMaxMatrix = new int[liczbaZadan+1, liczbaMaszyn+1];
+            for (int i = 1; i < liczbaMaszyn; i++)
             {
-                Cmax += Lista[z].Max();
+                for (int z = 1; z < liczbaZadan; z++)
+                {
+                    if ( cMaxMatrix [i-1, z] > cMaxMatrix [i, z - 1])
+                    {
+                        cMaxMatrix[i, z] += cMaxMatrix[i - 1, z] + macierzZadan[i - 1, z - 1];
+                    }
+                    else
+                    {
+                        cMaxMatrix[i, z] += cMaxMatrix[i, z - 1] + macierzZadan[i - 1, z - 1];
+                    }
+                }
             }
-            
+
+            Cmax = cMaxMatrix[liczbaZadan + 1, liczbaMaszyn + 1];
             return Cmax;
         }
 
