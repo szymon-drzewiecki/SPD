@@ -59,8 +59,7 @@ namespace Zadanie2
             }
             else
             {
-                nrInstancji--;
-
+                KolejkaZadan kz = new KolejkaZadan(sciezkaPlikDane, nrInstancji);
                 //Wyliczanie odpowiednich sekwencji algorytmami
 
                 //Wizualizacja
