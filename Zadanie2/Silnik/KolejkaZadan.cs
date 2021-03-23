@@ -10,9 +10,10 @@ namespace Silnik
     {
         public Zadanie[] zadania;
 
-        public KolejkaZadan()
+        public KolejkaZadan(string sciezka, int nrInstancji)
         {
-
+            Parser parser = new Parser(sciezka);
+            zadania = parser.OdczytajZadania(nrInstancji);
         }
     }
 }
