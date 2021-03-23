@@ -12,17 +12,15 @@ namespace Silnik
         {
             int Cmax = 0;
             var liczbaZadan = kolejka.zadania.Length;
-            var liczbaMaszyn = kolejka.zadania[0].ZwrocLiczbeMaszyn();
-            int[] tmpHolder = new int[liczbaMaszyn];
+            var liczbaMaszyn = kolejka.zadania[0].czasyOperacji.Length;
 
             int[,] macierzZadan = new int[liczbaZadan, liczbaMaszyn];
 
             for (int x = 0; x < liczbaZadan; x++)
             {
-                tmpHolder = kolejka.zadania[x].ZwrocCzasy();
                 for (int y = 0; y < liczbaMaszyn; y++)
                 {
-                    macierzZadan[x, y] = tmpHolder[y];
+                    macierzZadan[x, y] = kolejka.zadania[x].czasyOperacji[y];
                 }
             }
 
@@ -33,7 +31,7 @@ namespace Silnik
                 {
                     if ( cMaxMatrix [i-1, z] > cMaxMatrix [i, z - 1])
                     {
-                        cMaxMatrix[i, z] += cMaxMatrix[i - 1, z] + macierzZadan[kolejnoscZadan[i-1]-1, z - 1];
+                        cMaxMatrix[i, z] += cMaxMatrix[i - 1, z] + macierzZadan[kolejnoscZadan[i - 1]-1, z - 1];
                     }
                     else
                     {
@@ -42,21 +40,10 @@ namespace Silnik
                 }
             }
 
-            Cmax = cMaxMatrix[liczbaZadan + 1, liczbaMaszyn + 1];
+            Cmax = cMaxMatrix[liczbaZadan, liczbaMaszyn];
             return Cmax;
         }
 
-        public int[] PrzegladZupelny(KolejkaZadan kolejka)
-        {
-            var liczbaZadan = kolejka.zadania.Length;
-            int[] macierzPermutacji = new int[liczbaZadan];
-
-            for (int x = 0; x < liczbaZadan; x++)
-            {
-                macierzPermutacji[x] = x+1;
-            }
-
-
-        }
+        
     }
 }

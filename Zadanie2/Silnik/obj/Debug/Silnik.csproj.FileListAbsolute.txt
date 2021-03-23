@@ -4,3 +4,7 @@ C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\Silnik\obj\Debug\Silnik.csp
 C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\Silnik\obj\Debug\Silnik.csproj.CoreCompileInputs.cache
 C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\Silnik\obj\Debug\Silnik.dll
 C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\Silnik\obj\Debug\Silnik.pdb
+C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\obj\Debug\Silnik.csprojAssemblyReference.cache
+C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\obj\Debug\Silnik.csproj.CoreCompileInputs.cache
+C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\obj\Debug\Silnik.dll
+C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\obj\Debug\Silnik.pdb

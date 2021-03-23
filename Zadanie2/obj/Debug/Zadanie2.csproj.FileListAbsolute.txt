@@ -19,3 +19,6 @@ C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\obj\Debug\Zadanie2.csproj.C
 C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\obj\Debug\Zadanie2.csproj.CopyComplete
 C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\obj\Debug\Zadanie2.exe
 C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\obj\Debug\Zadanie2.pdb
+C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\bin\Debug\Silnik.dll
+C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\bin\Debug\Silnik.pdb
+C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\obj\Debug\Zadanie2.csproj.CopyComplete

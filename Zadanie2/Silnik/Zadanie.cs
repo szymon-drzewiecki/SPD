@@ -8,7 +8,7 @@ namespace Silnik
 {
     public class Zadanie
     {
-        private int[] czasyOperacji;
+        public int[] czasyOperacji;
 
         public Zadanie(int liczbaMaszyn)
         {

@@ -1,0 +1,2 @@
+C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\.vs\Zadanie2\v16\lut\0\i\Silnik\Debug\Silnik.csprojAssemblyReference.cache
+C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\.vs\Zadanie2\v16\lut\0\i\Silnik\Debug\Silnik.csproj.CoreCompileInputs.cache
