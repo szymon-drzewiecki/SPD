@@ -25,5 +25,10 @@ namespace Silnik
         {
             return czasyOperacji;
         }
+
+        public int ZwrocLiczbeMaszyn()
+        {
+            return czasyOperacji.Length;
+        }
     }
 }
