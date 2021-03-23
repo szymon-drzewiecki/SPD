@@ -27,17 +27,17 @@ namespace Silnik
             }
 
             int[,] cMaxMatrix = new int[liczbaZadan+1, liczbaMaszyn+1];
-            for (int i = 1; i < liczbaMaszyn; i++)
+            for (int i = 1; i < liczbaMaszyn+1; i++)
             {
-                for (int z = 1; z < liczbaZadan; z++)
+                for (int z = 1; z < liczbaZadan+1; z++)
                 {
                     if ( cMaxMatrix [i-1, z] > cMaxMatrix [i, z - 1])
                     {
-                        cMaxMatrix[i, z] += cMaxMatrix[i - 1, z] + macierzZadan[i - 1, z - 1];
+                        cMaxMatrix[i, z] += cMaxMatrix[i - 1, z] + macierzZadan[kolejnoscZadan[i-1]-1, z - 1];
                     }
                     else
                     {
-                        cMaxMatrix[i, z] += cMaxMatrix[i, z - 1] + macierzZadan[i - 1, z - 1];
+                        cMaxMatrix[i, z] += cMaxMatrix[i, z - 1] + macierzZadan[kolejnoscZadan[i - 1] - 1, z - 1];
                     }
                 }
             }
