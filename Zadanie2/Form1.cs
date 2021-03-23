@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,33 +23,43 @@ namespace Zadanie2
 
         private void btnPython_Click(object sender, EventArgs e)
         {
-            OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.InitialDirectory = @"C:\";
-            fileDialog.Title = "Wybierz plik python.exe";
-            fileDialog.DefaultExt = "exe";
-            fileDialog.ShowDialog();
+            OpenFileDialog wyborPliku = new OpenFileDialog
+            {
+                InitialDirectory = @"C:\",
+                Title = "Wybierz plik python.exe",
+                DefaultExt = "exe"
+            };
+            wyborPliku.ShowDialog();
 
-            sciezkaPython = fileDialog.FileName;
+            sciezkaPython = wyborPliku.FileName;
             tbPython.Text = sciezkaPython;
         }
 
         private void btnPlikDane_Click(object sender, EventArgs e)
         {
-            OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.InitialDirectory = @"C:\";
-            fileDialog.Title = "Wybierz plik z danymi w formacie neh";
-            fileDialog.DefaultExt = "txt";
-            fileDialog.ShowDialog();
+            OpenFileDialog wyborPliku = new OpenFileDialog
+            {
+                InitialDirectory = @"C:\",
+                Title = "Wybierz plik z danymi w formacie neh",
+                DefaultExt = "txt"
+            };
+            wyborPliku.ShowDialog();
 
-            sciezkaPlikDane = fileDialog.FileName;
+            sciezkaPlikDane = wyborPliku.FileName;
             tbPlikDane.Text = sciezkaPlikDane;
         }
 
         private void btnUruchom_Click(object sender, EventArgs e)
         {
             /* Glowna funkcja programu. Wszystkie operacje zaczynaja sie od tego miejsca */
-            //algorytmy chlopakow
-            //wizualizacja
+            //Wyliczanie odpowiednich sekwencji algorytmami
+            
+            //Wizualizacja
+            var proces = new Process();
+            proces.StartInfo.FileName = sciezkaPython;
+            proces.StartInfo.Arguments = @"w_gantt.py";
+            proces.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            proces.Start();
         }
     }
 }
