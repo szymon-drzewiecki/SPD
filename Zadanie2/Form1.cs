@@ -16,6 +16,7 @@ namespace Zadanie2
     {
         private string sciezkaPython;
         private string sciezkaPlikDane;
+        private int nrInstancji;
         public Form1()
         {
             InitializeComponent();
@@ -49,17 +50,26 @@ namespace Zadanie2
             tbPlikDane.Text = sciezkaPlikDane;
         }
 
+        /* Glowna funkcja programu. Wszystkie operacje zaczynaja sie od tego miejsca */
         private void btnUruchom_Click(object sender, EventArgs e)
         {
-            /* Glowna funkcja programu. Wszystkie operacje zaczynaja sie od tego miejsca */
-            //Wyliczanie odpowiednich sekwencji algorytmami
-            
-            //Wizualizacja
-            var proces = new Process();
-            proces.StartInfo.FileName = sciezkaPython;
-            proces.StartInfo.Arguments = @"w_gantt.py";
-            proces.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            proces.Start();
+            if (!Int32.TryParse(tbNrInstancji.Text, out nrInstancji))
+            {
+                MessageBox.Show("Złe dane w polu instancji!");
+            }
+            else
+            {
+                nrInstancji--;
+
+                //Wyliczanie odpowiednich sekwencji algorytmami
+
+                //Wizualizacja
+                var proces = new Process();
+                proces.StartInfo.FileName = sciezkaPython;
+                proces.StartInfo.Arguments = @"w_gantt.py";
+                proces.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                proces.Start();
+            }
         }
     }
 }
