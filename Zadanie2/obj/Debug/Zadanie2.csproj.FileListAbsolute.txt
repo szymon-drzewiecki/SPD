@@ -1,0 +1,13 @@
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\bin\Debug\Zadanie2.exe.config
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\bin\Debug\Zadanie2.exe
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\bin\Debug\Zadanie2.pdb
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\bin\Debug\Silnik.dll
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\bin\Debug\Silnik.pdb
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\obj\Debug\Zadanie2.csprojAssemblyReference.cache
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\obj\Debug\Zadanie2.Form1.resources
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\obj\Debug\Zadanie2.Properties.Resources.resources
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\obj\Debug\Zadanie2.csproj.GenerateResource.cache
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\obj\Debug\Zadanie2.csproj.CoreCompileInputs.cache
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\obj\Debug\Zadanie2.csproj.CopyComplete
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\obj\Debug\Zadanie2.exe
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\obj\Debug\Zadanie2.pdb
