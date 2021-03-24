@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BF6B6752-94A2-44EF-BFF0-721A4167633A}"
 	ProjectSection(SolutionItems) = preProject
 		neh_data.txt = neh_data.txt
+		w_gantt.py = w_gantt.py
 	EndProjectSection
 EndProject
 Global

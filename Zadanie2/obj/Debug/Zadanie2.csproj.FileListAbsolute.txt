@@ -7,6 +7,7 @@ C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\obj\Debug\
 C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\obj\Debug\Zadanie2.csproj.CoreCompileInputs.cache
 C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\obj\Debug\Zadanie2.exe
 C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\obj\Debug\Zadanie2.pdb
+<<<<<<< HEAD
 C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\bin\Debug\Zadanie2.exe.config
 C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\bin\Debug\Zadanie2.exe
 C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\bin\Debug\Zadanie2.pdb
@@ -22,3 +23,5 @@ C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie2\obj\Debug\Zadanie2.pdb
 C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\bin\Debug\Silnik.dll
 C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\bin\Debug\Silnik.pdb
 C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie2\obj\Debug\Zadanie2.csproj.CopyComplete
+=======
+>>>>>>> 6a1311a1705ed7a75ef627878d00552343520ccc

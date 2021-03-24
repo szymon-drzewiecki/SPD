@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,7 @@ namespace Silnik
         public Zadanie[] OdczytajZadania(int nrInstancji)
         {
             Zadanie[] zadania = new Zadanie[3];
+            StreamWriter plikWyjsciowy = File.CreateText("output.txt");
             int licznik_instancji = 0;
             int licznik_zadan = 0;
             int liczbaMaszyn = 0;
@@ -47,7 +49,8 @@ namespace Silnik
                     if (linia == "")
                         break;
 
-                    Console.WriteLine(linia);
+                    plikWyjsciowy.WriteLine(linia);
+                    plikWyjsciowy.Flush();
 
                     string[] _ = linia.Split(' ');
                     if (!odczytanoOgolne)
@@ -69,6 +72,7 @@ namespace Silnik
                     }
                 }
             }
+            plikWyjsciowy.Close();
 
             return zadania;
         }
