@@ -43,7 +43,6 @@ namespace Silnik
             Cmax = cMaxMatrix[liczbaZadan, liczbaMaszyn];
             return Cmax;
         }
-
-        
     }
+
 }
