@@ -61,6 +61,14 @@ namespace Zadanie2
             {
                 KolejkaZadan kz = new KolejkaZadan(sciezkaPlikDane, nrInstancji);
                 //Wyliczanie odpowiednich sekwencji algorytmami
+                if(cbAlgorytm.SelectedIndex == 0)
+                {
+                    //Przeglad zupelny
+                }
+                else
+                {
+                    //Johnson
+                }
 
                 //Wizualizacja
                 var proces = new Process();

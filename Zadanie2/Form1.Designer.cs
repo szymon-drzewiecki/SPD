@@ -33,6 +33,7 @@ namespace Zadanie2
             this.tbPython = new System.Windows.Forms.TextBox();
             this.btnPython = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbAlgorytm = new System.Windows.Forms.ComboBox();
             this.tbNrInstancji = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbPlikDane = new System.Windows.Forms.TextBox();
@@ -73,20 +74,33 @@ namespace Zadanie2
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbAlgorytm);
             this.groupBox2.Controls.Add(this.tbNrInstancji);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.tbPlikDane);
             this.groupBox2.Controls.Add(this.btnPlikDane);
             this.groupBox2.Location = new System.Drawing.Point(12, 77);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(360, 88);
+            this.groupBox2.Size = new System.Drawing.Size(360, 97);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Plik z danymi";
             // 
+            // cbAlgorytm
+            // 
+            this.cbAlgorytm.FormattingEnabled = true;
+            this.cbAlgorytm.Items.AddRange(new object[] {
+            "Przegląd zupełny",
+            "Johnson"});
+            this.cbAlgorytm.Location = new System.Drawing.Point(6, 70);
+            this.cbAlgorytm.Name = "cbAlgorytm";
+            this.cbAlgorytm.Size = new System.Drawing.Size(119, 21);
+            this.cbAlgorytm.TabIndex = 4;
+            this.cbAlgorytm.Text = "Algorytm";
+            // 
             // tbNrInstancji
             // 
-            this.tbNrInstancji.Location = new System.Drawing.Point(302, 62);
+            this.tbNrInstancji.Location = new System.Drawing.Point(302, 70);
             this.tbNrInstancji.Name = "tbNrInstancji";
             this.tbNrInstancji.Size = new System.Drawing.Size(52, 20);
             this.tbNrInstancji.TabIndex = 3;
@@ -95,7 +109,7 @@ namespace Zadanie2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(178, 62);
+            this.label1.Location = new System.Drawing.Point(178, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 18);
             this.label1.TabIndex = 2;
@@ -161,6 +175,7 @@ namespace Zadanie2
         private System.Windows.Forms.TextBox tbPlikDane;
         private System.Windows.Forms.Button btnPlikDane;
         private System.Windows.Forms.Button btnUruchom;
+        private System.Windows.Forms.ComboBox cbAlgorytm;
     }
 }
 
