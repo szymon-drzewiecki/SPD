@@ -60,10 +60,13 @@ namespace Zadanie2
             else
             {
                 KolejkaZadan kz = new KolejkaZadan(sciezkaPlikDane, nrInstancji);
+                Algorytmy algorytmy = new Algorytmy();
                 //Wyliczanie odpowiednich sekwencji algorytmami
                 if(cbAlgorytm.SelectedIndex == 0)
                 {
-                    //Przeglad zupelny
+                    PrzegladZupelny przegladZupelny = new PrzegladZupelny();
+                    int[] sekwencja = przegladZupelny.Przeglad(kz);
+                    int Cmax = algorytmy.calculateTotalspan(kz, sekwencja);
                 }
                 else
                 {
