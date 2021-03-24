@@ -76,5 +76,17 @@ namespace Silnik
 
             return zadania;
         }
+
+        public void Dopisz(int cmax, int[] sekwencja)
+        {
+            StreamWriter plikWyjsciowy = File.AppendText("output.txt");
+            plikWyjsciowy.WriteLine();
+            plikWyjsciowy.WriteLine(cmax.ToString());
+            foreach (int i in sekwencja)
+                plikWyjsciowy.Write(i.ToString() + " ");
+
+            plikWyjsciowy.Flush();
+            plikWyjsciowy.Close();
+        }
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Silnik
 {
-    class PrzegladZupelny
+    public class PrzegladZupelny
     {
-        PrzegladZupelny()
+        public PrzegladZupelny()
         {
 
         }

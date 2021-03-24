@@ -59,11 +59,15 @@ namespace Zadanie2
             }
             else
             {
+                Algorytmy algorytmy = new Algorytmy();
                 KolejkaZadan kz = new KolejkaZadan(sciezkaPlikDane, nrInstancji);
                 //Wyliczanie odpowiednich sekwencji algorytmami
                 if(cbAlgorytm.SelectedIndex == 0)
                 {
-                    //Przeglad zupelny
+                    PrzegladZupelny przegladZupelny = new PrzegladZupelny();
+                    int[] sekwencja = przegladZupelny.Przeglad(kz);
+                    int Cmax = algorytmy.calculateTotalspan(kz, sekwencja);
+                    kz.WypiszRezultaty(Cmax, sekwencja);
                 }
                 else
                 {
