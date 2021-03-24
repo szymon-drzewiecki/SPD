@@ -1,0 +1,5 @@
+C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\bin\Debug\Silnik.dll
+C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\bin\Debug\Silnik.pdb
+C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\obj\Debug\Silnik.csproj.CoreCompileInputs.cache
+C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\obj\Debug\Silnik.dll
+C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\obj\Debug\Silnik.pdb
