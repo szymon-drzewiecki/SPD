@@ -35,7 +35,7 @@ class Task:
 def calc_ts(seconds):
     minutes = seconds // 60
     hours = minutes // 60
-    if hours > 1:
+    if hours >= 1:
         minutes = minutes % 60
     r_seconds = seconds % 60
 
