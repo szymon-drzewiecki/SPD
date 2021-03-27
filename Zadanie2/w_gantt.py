@@ -45,6 +45,7 @@ def calc_ts(seconds):
 #Stworzenie zbioru danych o polozeniu kazdego zadania w wykresie Gantta
 def add_task_data(df, tasks):
     _tasks = []
+    cmax = 0
     for i,t in enumerate(tasks):
         if i == 0:
             _tasks.append(Task("Zad. "+str(i+1), t, 0))
@@ -64,8 +65,9 @@ def add_task_data(df, tasks):
                              End=calc_ts(t.end_time),
                              Res="Maszyna "+str(i+1),Name="Zad. "+str(j+1))
             _dr += 1
-    
-    return df
+            cmax=t.end_time
+            
+    return df, cmax
 
 if __name__ == "__main__":
     tasks = []
@@ -89,10 +91,12 @@ if __name__ == "__main__":
 
     tasks_o = [tasks[i] for i in tasks_order]
 
-    df = pd.DataFrame(columns=['Start', 'End', 'Res', 'Name'])
-    df = add_task_data(df, tasks_o)
+    df = pd.DataFrame(columns=['Start', 'End', 'Res', 'Name', 'End_s'])
+    df, cmax = add_task_data(df, tasks_o)
     
     fig = px.timeline(df, x_start="Start", x_end="End", y="Res", color="Name")
-    fig.update_layout(xaxis=dict(title='Czas', tickformat = '%M:%S'),
+    fig.update_layout(xaxis=dict(title='Czas (Cmax = '+str(cmax)+')',
+                                 tickformat='%M:%S'),
                       yaxis=dict(title='Maszyny'))
+    fig.update_yaxes(autorange="reversed")
     fig.show()
