@@ -80,6 +80,7 @@ namespace Zadanie2
                 else
                 {
                     //Neh
+                    int[] posortowanePriorytety = Algorytmy.ZwrocPosortowanePriorytety(kz);
                 }
 
                 //Wizualizacja
