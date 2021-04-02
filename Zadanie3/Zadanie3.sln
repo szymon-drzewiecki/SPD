@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadanie3", "Zadanie3.csproj", "{24E28995-FD89-4E2F-BFAF-9F8AB04020DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silnik", "Silnik\Silnik.csproj", "{636FC9E7-FF45-4D91-A6C2-2EB6A0B2D988}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BF6B6752-94A2-44EF-BFF0-721A4167633A}"
+	ProjectSection(SolutionItems) = preProject
+		neh_data.txt = neh_data.txt
+		w_gantt.py = w_gantt.py
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24E28995-FD89-4E2F-BFAF-9F8AB04020DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24E28995-FD89-4E2F-BFAF-9F8AB04020DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24E28995-FD89-4E2F-BFAF-9F8AB04020DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24E28995-FD89-4E2F-BFAF-9F8AB04020DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{636FC9E7-FF45-4D91-A6C2-2EB6A0B2D988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{636FC9E7-FF45-4D91-A6C2-2EB6A0B2D988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{636FC9E7-FF45-4D91-A6C2-2EB6A0B2D988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{636FC9E7-FF45-4D91-A6C2-2EB6A0B2D988}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9D80C07-6A56-48FF-BE59-67369A4C38EA}
+	EndGlobalSection
+EndGlobal

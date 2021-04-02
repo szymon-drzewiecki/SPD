@@ -1,0 +1,33 @@
+[23:47:40.206 Verbose] - BuildManager - C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\PrzegladZupelny.cs(15,22): error CS0161: „PrzegladZupelny.Permutation(KolejkaZadan)”: nie wszystkie ścieżki w kodzie zwracają wartość
+[23:47:40.207 Verbose] - BuildManager - C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Roslyn\Microsoft.CSharp.Core.targets(71,5): error MSB4181: Zadanie „Csc” zwróciło wartość false, ale nie zarejestrowało błędu.
+[23:47:40.214 Verbose] - BuildManager - Brak niektórych ścieżek plików zdefiniowanych w pliku csproj w ramach ścieżki kompilacji Live Unit Testing. Sprawdź, czy te pliki powinny znajdować się w ścieżce kompilacji Live Unit Testing i, jeśli jest to konieczne, zaktualizuj definicję csproj, aby wyszukać te pliki w innym miejscu.
+[23:47:40.214 Verbose] - BuildManager - Element _OutputPathItem „C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\.vs\Zadanie2\v16\lut\0\b\Silnik\bin\Debug\” został obliczony za pośrednictwem:
+_OutputPathItem: '$(OutDir)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:309
+  OutDir: '$([MSBuild]::EnsureTrailingSlash($([MSBuild]::ValueOrDefault('$(OutDir)', '$(OutputPath)'))))' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:230
+    OutDir: 'C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\.vs\Zadanie2\v16\lut\0\b\Silnik\bin\Debug\' @ C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\Silnik.csproj:0
+    OutputPath: '$([MSBuild]::EnsureTrailingSlash('$(OutputPath)'))' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:157
+      OutputPath: 'bin\Debug\' @ C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\Silnik.csproj:20
+[23:47:40.215 Verbose] - BuildManager - Element AppConfigFileDestination „C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\.vs\Zadanie2\v16\lut\0\b\Silnik\bin\Debug\Silnik.dll.config” został obliczony za pośrednictwem:
+AppConfigFileDestination: '$(OutDir)$(TargetFileName).config' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:337
+  OutDir: '$([MSBuild]::EnsureTrailingSlash($([MSBuild]::ValueOrDefault('$(OutDir)', '$(OutputPath)'))))' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:230
+    OutDir: 'C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\.vs\Zadanie2\v16\lut\0\b\Silnik\bin\Debug\' @ C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\Silnik.csproj:0
+    OutputPath: '$([MSBuild]::EnsureTrailingSlash('$(OutputPath)'))' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:157
+      OutputPath: 'bin\Debug\' @ C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\Silnik.csproj:20
+  TargetFileName: '$(TargetName)$(TargetExt)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:247
+    TargetName: '$(AssemblyName)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:239
+      AssemblyName: 'Silnik' @ C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\Silnik.csproj:11
+    TargetExt: '.dll' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:218
+[23:47:40.215 Verbose] - BuildManager - Element _DebugSymbolsOutputPath „C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\.vs\Zadanie2\v16\lut\0\b\Silnik\bin\Debug\Silnik.pdb” został obliczony za pośrednictwem:
+_DebugSymbolsOutputPath: '@(_DebugSymbolsIntermediatePath->'$(OutDir)%(Filename)%(Extension)')' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:400
+  OutDir: '$([MSBuild]::EnsureTrailingSlash($([MSBuild]::ValueOrDefault('$(OutDir)', '$(OutputPath)'))))' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:230
+    OutDir: 'C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\.vs\Zadanie2\v16\lut\0\b\Silnik\bin\Debug\' @ C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\Silnik.csproj:0
+    OutputPath: '$([MSBuild]::EnsureTrailingSlash('$(OutputPath)'))' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:157
+      OutputPath: 'bin\Debug\' @ C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\Silnik.csproj:20
+[23:47:40.215 Verbose] - BuildManager - Element _ApplicationManifestFinal „C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\.vs\Zadanie2\v16\lut\0\b\Silnik\bin\Debug\Native.Silnik.manifest” został obliczony za pośrednictwem:
+_ApplicationManifestFinal: '$(OutDir)$(_DeploymentTargetApplicationManifestFileName)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:438
+  OutDir: '$([MSBuild]::EnsureTrailingSlash($([MSBuild]::ValueOrDefault('$(OutDir)', '$(OutputPath)'))))' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:230
+    OutDir: 'C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\.vs\Zadanie2\v16\lut\0\b\Silnik\bin\Debug\' @ C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\Silnik.csproj:0
+    OutputPath: '$([MSBuild]::EnsureTrailingSlash('$(OutputPath)'))' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:157
+      OutputPath: 'bin\Debug\' @ C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\Silnik.csproj:20
+  _DeploymentTargetApplicationManifestFileName: 'Native.$(AssemblyName).manifest' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:263
+    AssemblyName: 'Silnik' @ C:\Users\SzymonDrzewiecki\source\repos\szymon-drzewiecki\SPD\Zadanie2\Silnik\Silnik.csproj:11
