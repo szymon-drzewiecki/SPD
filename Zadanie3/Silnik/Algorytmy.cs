@@ -262,6 +262,31 @@ namespace Silnik
             }
             return kolejnoscJohnsona;
         }
-    }
 
+        /*
+         * Funkcja obliczajaca sumy czasow operacji dla kazdego zadania
+         * a nastepnie zwracajaca tablice tych sum.
+         */
+        private static int[] WyznaczPriorytety(KolejkaZadan kz)
+        {
+            int[] priorytety = new int[kz.zadania.Length];
+
+            for(int i = 0; i<priorytety.Length; i++)
+                priorytety[i] = kz.zadania[i].czasyOperacji.Sum();
+
+            return priorytety;
+        }
+
+        /*
+         * Funkcja sortujaca nierosnaco otrzymane priorytety zadan.
+         */
+        public static int[] ZwrocPosortowanePriorytety(KolejkaZadan kz)
+        {
+            int[] pp = WyznaczPriorytety(kz);
+            Array.Sort(pp);
+            Array.Reverse(pp);
+
+            return pp;
+        }
+    }
 }
