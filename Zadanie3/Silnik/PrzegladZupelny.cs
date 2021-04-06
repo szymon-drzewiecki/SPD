@@ -22,14 +22,13 @@ namespace Silnik
             {
                 poczatkowaKolejnosc[i] = i + 1;
             }
-            var algorytmy = new Algorytmy();
 
             List<int[]> macierzPermutacji = ListToArray(returnPermutation(poczatkowaKolejnosc));
             int checkedCmax = int.MaxValue;
 
             foreach (int[] kolejnosc in macierzPermutacji)
             {
-               checkedCmax = algorytmy.calculateTotalspan(kolejka, kolejnosc);
+               checkedCmax = Algorytmy.calculateTotalspan(kolejka, kolejnosc);
                 if (checkedCmax < cmax)
                 {
                     cmax = checkedCmax;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Silnik
 {
-    class Parser
+    public class Parser
     {
         private string[] dane;
 
@@ -87,6 +88,24 @@ namespace Silnik
 
             plikWyjsciowy.Flush();
             plikWyjsciowy.Close();
+        }
+
+        public static bool ZapiszWynik(Stopwatch sw, int cmax, KolejkaZadan kz, string algName, int nrInst = 0)
+        {
+            TimeSpan ts = sw.Elapsed;
+            StreamWriter plikWyjsciowy = File.AppendText("result.txt");
+            if (nrInst != 0)
+            {
+                plikWyjsciowy.WriteLine("\n--Instancja " + nrInst.ToString() + "--\n" +
+                                        "L. maszyn: " + kz.zadania[0].czasyOperacji.Length.ToString() +
+                                        "\tL. zadan: " + kz.zadania.Length.ToString() + "\n");
+            }
+            plikWyjsciowy.Write(algName + ":  " + "Cmax = " + cmax.ToString() + "\tCzas = ");
+            plikWyjsciowy.Write("{0:00}:{1:00}.{2}\n", ts.Minutes, ts.Seconds, ts.Milliseconds);
+
+            plikWyjsciowy.Flush();
+            plikWyjsciowy.Close();
+            return true;
         }
     }
 }

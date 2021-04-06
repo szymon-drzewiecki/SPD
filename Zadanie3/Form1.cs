@@ -67,28 +67,34 @@ namespace Zadanie2
                     //Przeglad zupelny
                     PrzegladZupelny przegladZupelny = new PrzegladZupelny();
                     int[] sekwencja = przegladZupelny.Przeglad(kz);
-                    int Cmax = algorytmy.calculateTotalspan(kz, sekwencja);
+                    int Cmax = Algorytmy.calculateTotalspan(kz, sekwencja);
                     kz.WypiszRezultaty(Cmax, sekwencja);
                 }
                 else if (cbAlgorytm.SelectedIndex == 1)
                 {
                     //Johnson
                     int[] sekwencja = algorytmy.AlgorytmJohnsona(kz);
-                    int Cmax = algorytmy.calculateTotalspan(kz, sekwencja);
+                    int Cmax = Algorytmy.calculateTotalspan(kz, sekwencja);
                     kz.WypiszRezultaty(Cmax, sekwencja);
                 }
                 else
                 {
                     //Neh
-                    int[] posortowanePriorytety = Algorytmy.ZwrocPosortowanePriorytety(kz);
+                    List<Tuple<int, int>> posortowane = Algorytmy.ZwrocPosortowanePriorytety(kz);
+                    List<int> sekwencja = Neh.NehBasic(kz, posortowane);
+                    foreach (int i in sekwencja)
+                        Console.Write("->" + i.ToString());
                 }
 
                 //Wizualizacja
-                var proces = new Process();
-                proces.StartInfo.FileName = sciezkaPython;
-                proces.StartInfo.Arguments = @"w_gantt.py";
-                proces.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                proces.Start();
+                if (rbVisualize.Checked)
+                {
+                    var proces = new Process();
+                    proces.StartInfo.FileName = sciezkaPython;
+                    proces.StartInfo.Arguments = @"w_gantt.py";
+                    proces.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                    proces.Start();
+                }
             }
         }
     }

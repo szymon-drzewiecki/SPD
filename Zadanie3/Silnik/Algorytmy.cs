@@ -8,7 +8,7 @@ namespace Silnik
 {
     public class Algorytmy
     {
-        public int calculateTotalspan(KolejkaZadan kolejka, int[] kolejnoscZadan)
+        public static int calculateTotalspan(KolejkaZadan kolejka, int[] kolejnoscZadan)
         {
             int Cmax = 0;
             var liczbaZadan = kolejka.zadania.Length;
@@ -279,14 +279,18 @@ namespace Silnik
 
         /*
          * Funkcja sortujaca nierosnaco otrzymane priorytety zadan.
+         * 
+         * Na wyjsciu lista krotek. Krotka wyglada tak: (indeks, priorytet)
          */
-        public static int[] ZwrocPosortowanePriorytety(KolejkaZadan kz)
+        public static List<Tuple<int, int>> ZwrocPosortowanePriorytety(KolejkaZadan kz)
         {
+            List<Tuple<int, int>> tl = new List<Tuple<int, int>>();
             int[] pp = WyznaczPriorytety(kz);
-            Array.Sort(pp);
-            Array.Reverse(pp);
+            for (int i = 0; i < pp.Length; i++)
+                tl.Add(new Tuple<int, int>(i, pp[i]));
+            tl = tl.OrderByDescending(s => s.Item2).ToList();
 
-            return pp;
+            return tl;
         }
     }
 }

@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		w_gantt.py = w_gantt.py
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadaniaAlgorytmow", "BadaniaAlgorytmow\BadaniaAlgorytmow.csproj", "{5C3ACA29-750B-4CE0-8C3C-F3F68EC32F2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{636FC9E7-FF45-4D91-A6C2-2EB6A0B2D988}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{636FC9E7-FF45-4D91-A6C2-2EB6A0B2D988}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{636FC9E7-FF45-4D91-A6C2-2EB6A0B2D988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C3ACA29-750B-4CE0-8C3C-F3F68EC32F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C3ACA29-750B-4CE0-8C3C-F3F68EC32F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C3ACA29-750B-4CE0-8C3C-F3F68EC32F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C3ACA29-750B-4CE0-8C3C-F3F68EC32F2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

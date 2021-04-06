@@ -39,6 +39,7 @@ namespace Zadanie2
             this.tbPlikDane = new System.Windows.Forms.TextBox();
             this.btnPlikDane = new System.Windows.Forms.Button();
             this.btnUruchom = new System.Windows.Forms.Button();
+            this.rbVisualize = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -145,11 +146,23 @@ namespace Zadanie2
             this.btnUruchom.UseVisualStyleBackColor = true;
             this.btnUruchom.Click += new System.EventHandler(this.btnUruchom_Click);
             // 
+            // rbVisualize
+            // 
+            this.rbVisualize.AutoSize = true;
+            this.rbVisualize.Location = new System.Drawing.Point(18, 181);
+            this.rbVisualize.Name = "rbVisualize";
+            this.rbVisualize.Size = new System.Drawing.Size(84, 17);
+            this.rbVisualize.TabIndex = 3;
+            this.rbVisualize.TabStop = true;
+            this.rbVisualize.Text = "Wizualizacja";
+            this.rbVisualize.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 222);
+            this.Controls.Add(this.rbVisualize);
             this.Controls.Add(this.btnUruchom);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -162,6 +175,7 @@ namespace Zadanie2
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -177,6 +191,7 @@ namespace Zadanie2
         private System.Windows.Forms.Button btnPlikDane;
         private System.Windows.Forms.Button btnUruchom;
         private System.Windows.Forms.ComboBox cbAlgorytm;
+        private System.Windows.Forms.RadioButton rbVisualize;
     }
 }
 
