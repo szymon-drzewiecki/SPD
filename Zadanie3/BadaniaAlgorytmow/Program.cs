@@ -16,7 +16,7 @@ namespace BadaniaAlgorytmow
                 sw.Start();
                 int[] sekwencja = algorytmy.AlgorytmJohnsona(kz);
                 sw.Stop();
-                int Cmax = algorytmy.calculateTotalspan(kz, sekwencja);
+                int Cmax = Algorytmy.calculateTotalspan(kz, sekwencja);
                 Parser.ZapiszWynik(sw, Cmax, kz, "Johnson", i + 1);
                 sw.Reset();
             }
