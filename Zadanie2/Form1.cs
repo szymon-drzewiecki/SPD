@@ -64,6 +64,7 @@ namespace Zadanie2
                 //Wyliczanie odpowiednich sekwencji algorytmami
                 if(cbAlgorytm.SelectedIndex == 0)
                 {
+                    //Przeglad zupelny
                     PrzegladZupelny przegladZupelny = new PrzegladZupelny();
                     int[] sekwencja = przegladZupelny.Przeglad(kz);
                     int Cmax = algorytmy.calculateTotalspan(kz, sekwencja);
@@ -72,6 +73,9 @@ namespace Zadanie2
                 else
                 {
                     //Johnson
+                    int[] sekwencja = algorytmy.AlgorytmJohnsona(kz);
+                    int Cmax = algorytmy.calculateTotalspan(kz, sekwencja);
+                    kz.WypiszRezultaty(Cmax, sekwencja);
                 }
 
                 //Wizualizacja

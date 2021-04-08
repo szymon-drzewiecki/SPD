@@ -1,0 +1,6 @@
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\Silnik\bin\Debug\Silnik.dll
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\Silnik\bin\Debug\Silnik.pdb
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\Silnik\obj\Debug\Silnik.csprojAssemblyReference.cache
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\Silnik\obj\Debug\Silnik.csproj.CoreCompileInputs.cache
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\Silnik\obj\Debug\Silnik.dll
+C:\Users\HARDPC\Source\Repos\SPD\Zadanie2\Silnik\obj\Debug\Silnik.pdb
