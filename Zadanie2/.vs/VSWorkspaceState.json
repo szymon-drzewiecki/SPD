@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SilnikTests"
   ],
-  "SelectedNode": "\\Zadanie2.sln",
+  "SelectedNode": "\\SilnikTests\\AlgorytmyTests.cs",
   "PreviewInSolutionExplorer": false
 }
