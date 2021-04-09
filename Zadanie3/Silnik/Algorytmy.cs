@@ -11,7 +11,7 @@ namespace Silnik
         public static int calculateTotalspan(KolejkaZadan kolejka, int[] kolejnoscZadan)
         {
             int Cmax = 0;
-            var liczbaZadan = kolejka.zadania.Length;
+            var liczbaZadan = kolejnoscZadan.Length;
             var liczbaMaszyn = kolejka.zadania[0].czasyOperacji.Length;
 
             int[,] macierzZadan = new int[liczbaZadan, liczbaMaszyn];
