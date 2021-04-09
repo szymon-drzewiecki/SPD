@@ -1,0 +1,13 @@
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie3\bin\Debug\Zadanie2.exe.config
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie3\bin\Debug\Zadanie2.exe
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie3\bin\Debug\Zadanie2.pdb
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie3\bin\Debug\Silnik.dll
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie3\bin\Debug\Silnik.pdb
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie3\obj\Debug\Zadanie3.csprojAssemblyReference.cache
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie3\obj\Debug\Zadanie2.Form1.resources
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie3\obj\Debug\Zadanie2.Properties.Resources.resources
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie3\obj\Debug\Zadanie3.csproj.GenerateResource.cache
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie3\obj\Debug\Zadanie3.csproj.CoreCompileInputs.cache
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie3\obj\Debug\Zadanie3.csproj.CopyComplete
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie3\obj\Debug\Zadanie2.exe
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie3\obj\Debug\Zadanie2.pdb

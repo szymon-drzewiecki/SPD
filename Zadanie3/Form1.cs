@@ -61,20 +61,25 @@ namespace Zadanie2
             {
                 Algorytmy algorytmy = new Algorytmy();
                 KolejkaZadan kz = new KolejkaZadan(sciezkaPlikDane, nrInstancji);
-                //Wyliczanie odpowiednich sekwencji algorytmami
-                if(cbAlgorytm.SelectedIndex == 0)
+                var kolejnoscZadan = new int[kz.zadania.Length];
+                for (int x = 0; x < kz.zadania.Length; x++)
+                {
+                    kolejnoscZadan[x] = x + 1;
+                }
+                int[,] macierzZadan = Algorytmy.pasreMacierzZadan(kz, kolejnoscZadan);
+                if (cbAlgorytm.SelectedIndex == 0)
                 {
                     //Przeglad zupelny
                     PrzegladZupelny przegladZupelny = new PrzegladZupelny();
                     int[] sekwencja = przegladZupelny.Przeglad(kz);
-                    int Cmax = Algorytmy.calculateTotalspan(kz, sekwencja);
+                    int Cmax = Algorytmy.calculateTotalspan(kz, macierzZadan, sekwencja);
                     kz.WypiszRezultaty(Cmax, sekwencja);
                 }
                 else if (cbAlgorytm.SelectedIndex == 1)
                 {
                     //Johnson
                     int[] sekwencja = algorytmy.AlgorytmJohnsona(kz);
-                    int Cmax = Algorytmy.calculateTotalspan(kz, sekwencja);
+                    int Cmax = Algorytmy.calculateTotalspan(kz, macierzZadan,sekwencja);
                     kz.WypiszRezultaty(Cmax, sekwencja);
                 }
                 else
@@ -82,8 +87,8 @@ namespace Zadanie2
                     //Neh
                     List<Tuple<int, int>> posortowane = Algorytmy.ZwrocPosortowanePriorytety(kz);
                     List<int> sekwencja = Neh.NehBasic(kz, posortowane);
-                    foreach (int i in sekwencja)
-                        Console.Write("->" + i.ToString());
+                    int Cmax = Algorytmy.calculateTotalspan(kz, macierzZadan, sekwencja.ToArray());
+                    kz.WypiszRezultaty(Cmax, sekwencja.ToArray());
                 }
 
                 //Wizualizacja

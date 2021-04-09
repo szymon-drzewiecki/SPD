@@ -14,6 +14,12 @@ namespace Silnik
         }
         public int[] Przeglad(KolejkaZadan kolejka)
         {
+            var kolejnoscZadan = new int[kolejka.zadania.Length];
+            for (int x = 0; x < kolejka.zadania.Length; x++)
+            {
+                kolejnoscZadan[x] = x + 1;
+            }
+            int[,] macierzZadan = Algorytmy.pasreMacierzZadan(kolejka, kolejnoscZadan);
             var liczbaZadan = kolejka.zadania.Length;
             int[] optymalnaKolejnosc = new int[liczbaZadan];
             int[] poczatkowaKolejnosc = new int[liczbaZadan];
@@ -28,7 +34,7 @@ namespace Silnik
 
             foreach (int[] kolejnosc in macierzPermutacji)
             {
-               checkedCmax = Algorytmy.calculateTotalspan(kolejka, kolejnosc);
+               checkedCmax = Algorytmy.calculateTotalspan(kolejka, macierzZadan, kolejnosc);
                 if (checkedCmax < cmax)
                 {
                     cmax = checkedCmax;

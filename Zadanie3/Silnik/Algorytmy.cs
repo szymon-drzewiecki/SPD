@@ -8,9 +8,8 @@ namespace Silnik
 {
     public class Algorytmy
     {
-        public static int calculateTotalspan(KolejkaZadan kolejka, int[] kolejnoscZadan)
+        public static int[,] pasreMacierzZadan(KolejkaZadan kolejka, int[] kolejnoscZadan)
         {
-            int Cmax = 0;
             var liczbaZadan = kolejnoscZadan.Length;
             var liczbaMaszyn = kolejka.zadania[0].czasyOperacji.Length;
 
@@ -23,7 +22,12 @@ namespace Silnik
                     macierzZadan[x, y] = kolejka.zadania[x].czasyOperacji[y];
                 }
             }
-
+            return macierzZadan;
+        }
+        public static int calculateTotalspan(KolejkaZadan kolejka, int[,] macierzZadan, int[] kolejnoscZadan) { 
+            int Cmax = 0;
+            var liczbaZadan = kolejnoscZadan.Length;
+            var liczbaMaszyn = kolejka.zadania[0].czasyOperacji.Length;
             int[,] cMaxMatrix = new int[liczbaZadan+1, liczbaMaszyn+1];
             for (int i = 1; i < liczbaZadan+1; i++)
             {
@@ -287,7 +291,7 @@ namespace Silnik
             List<Tuple<int, int>> tl = new List<Tuple<int, int>>();
             int[] pp = WyznaczPriorytety(kz);
             for (int i = 0; i < pp.Length; i++)
-                tl.Add(new Tuple<int, int>(i, pp[i]));
+                tl.Add(new Tuple<int, int>(i+1, pp[i]));
             tl = tl.OrderByDescending(s => s.Item2).ToList();
 
             return tl;
