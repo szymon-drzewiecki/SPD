@@ -1,0 +1,600 @@
+
+--Instancja 1--
+L. maszyn: 3	L. zadan: 4
+
+Johnson:  Cmax = 32	Czas = 00:00.31
+
+--Instancja 1--
+L. maszyn: 3	L. zadan: 4
+
+NEH:  Cmax = 32	Czas = 00:00.1
+
+--Instancja 2--
+L. maszyn: 5	L. zadan: 20
+
+Johnson:  Cmax = 1443	Czas = 00:00.0
+
+--Instancja 2--
+L. maszyn: 5	L. zadan: 20
+
+NEH:  Cmax = 1286	Czas = 00:00.0
+
+--Instancja 3--
+L. maszyn: 5	L. zadan: 20
+
+Johnson:  Cmax = 1463	Czas = 00:00.7
+
+--Instancja 3--
+L. maszyn: 5	L. zadan: 20
+
+NEH:  Cmax = 1365	Czas = 00:00.0
+
+--Instancja 4--
+L. maszyn: 5	L. zadan: 20
+
+Johnson:  Cmax = 1355	Czas = 00:00.43
+
+--Instancja 4--
+L. maszyn: 5	L. zadan: 20
+
+NEH:  Cmax = 1159	Czas = 00:00.1
+
+--Instancja 5--
+L. maszyn: 5	L. zadan: 20
+
+Johnson:  Cmax = 1418	Czas = 00:00.5
+
+--Instancja 5--
+L. maszyn: 5	L. zadan: 20
+
+NEH:  Cmax = 1325	Czas = 00:00.0
+
+--Instancja 6--
+L. maszyn: 5	L. zadan: 20
+
+Johnson:  Cmax = 1323	Czas = 00:00.5
+
+--Instancja 6--
+L. maszyn: 5	L. zadan: 20
+
+NEH:  Cmax = 1305	Czas = 00:00.0
+
+--Instancja 7--
+L. maszyn: 5	L. zadan: 20
+
+Johnson:  Cmax = 1355	Czas = 00:00.3
+
+--Instancja 7--
+L. maszyn: 5	L. zadan: 20
+
+NEH:  Cmax = 1228	Czas = 00:00.0
+
+--Instancja 8--
+L. maszyn: 5	L. zadan: 20
+
+Johnson:  Cmax = 1500	Czas = 00:00.4
+
+--Instancja 8--
+L. maszyn: 5	L. zadan: 20
+
+NEH:  Cmax = 1278	Czas = 00:00.0
+
+--Instancja 9--
+L. maszyn: 5	L. zadan: 20
+
+Johnson:  Cmax = 1402	Czas = 00:00.7
+
+--Instancja 9--
+L. maszyn: 5	L. zadan: 20
+
+NEH:  Cmax = 1223	Czas = 00:00.0
+
+--Instancja 10--
+L. maszyn: 5	L. zadan: 20
+
+Johnson:  Cmax = 1405	Czas = 00:00.3
+
+--Instancja 10--
+L. maszyn: 5	L. zadan: 20
+
+NEH:  Cmax = 1291	Czas = 00:00.0
+
+--Instancja 11--
+L. maszyn: 5	L. zadan: 20
+
+Johnson:  Cmax = 1164	Czas = 00:00.3
+
+--Instancja 11--
+L. maszyn: 5	L. zadan: 20
+
+NEH:  Cmax = 1151	Czas = 00:00.0
+
+--Instancja 12--
+L. maszyn: 10	L. zadan: 20
+
+Johnson:  Cmax = 1902	Czas = 00:00.9
+
+--Instancja 12--
+L. maszyn: 10	L. zadan: 20
+
+NEH:  Cmax = 1680	Czas = 00:00.0
+
+--Instancja 13--
+L. maszyn: 10	L. zadan: 20
+
+Johnson:  Cmax = 2091	Czas = 00:00.5
+
+--Instancja 13--
+L. maszyn: 10	L. zadan: 20
+
+NEH:  Cmax = 1729	Czas = 00:00.0
+
+--Instancja 14--
+L. maszyn: 10	L. zadan: 20
+
+Johnson:  Cmax = 1791	Czas = 00:00.7
+
+--Instancja 14--
+L. maszyn: 10	L. zadan: 20
+
+NEH:  Cmax = 1557	Czas = 00:00.0
+
+--Instancja 15--
+L. maszyn: 10	L. zadan: 20
+
+Johnson:  Cmax = 1547	Czas = 00:00.5
+
+--Instancja 15--
+L. maszyn: 10	L. zadan: 20
+
+NEH:  Cmax = 1439	Czas = 00:00.0
+
+--Instancja 16--
+L. maszyn: 10	L. zadan: 20
+
+Johnson:  Cmax = 1653	Czas = 00:00.5
+
+--Instancja 16--
+L. maszyn: 10	L. zadan: 20
+
+NEH:  Cmax = 1502	Czas = 00:00.1
+
+--Instancja 17--
+L. maszyn: 10	L. zadan: 20
+
+Johnson:  Cmax = 1652	Czas = 00:00.6
+
+--Instancja 17--
+L. maszyn: 10	L. zadan: 20
+
+NEH:  Cmax = 1453	Czas = 00:00.0
+
+--Instancja 18--
+L. maszyn: 10	L. zadan: 20
+
+Johnson:  Cmax = 1671	Czas = 00:00.19
+
+--Instancja 18--
+L. maszyn: 10	L. zadan: 20
+
+NEH:  Cmax = 1562	Czas = 00:00.0
+
+--Instancja 19--
+L. maszyn: 10	L. zadan: 20
+
+Johnson:  Cmax = 1823	Czas = 00:00.20
+
+--Instancja 19--
+L. maszyn: 10	L. zadan: 20
+
+NEH:  Cmax = 1609	Czas = 00:00.0
+
+--Instancja 20--
+L. maszyn: 10	L. zadan: 20
+
+Johnson:  Cmax = 1720	Czas = 00:00.3
+
+--Instancja 20--
+L. maszyn: 10	L. zadan: 20
+
+NEH:  Cmax = 1647	Czas = 00:00.0
+
+--Instancja 21--
+L. maszyn: 10	L. zadan: 20
+
+Johnson:  Cmax = 1928	Czas = 00:00.5
+
+--Instancja 21--
+L. maszyn: 10	L. zadan: 20
+
+NEH:  Cmax = 1653	Czas = 00:00.6
+
+--Instancja 22--
+L. maszyn: 20	L. zadan: 20
+
+Johnson:  Cmax = 2703	Czas = 00:00.6
+
+--Instancja 22--
+L. maszyn: 20	L. zadan: 20
+
+NEH:  Cmax = 2410	Czas = 00:00.1
+
+--Instancja 23--
+L. maszyn: 20	L. zadan: 20
+
+Johnson:  Cmax = 2651	Czas = 00:00.8
+
+--Instancja 23--
+L. maszyn: 20	L. zadan: 20
+
+NEH:  Cmax = 2150	Czas = 00:00.2
+
+--Instancja 24--
+L. maszyn: 20	L. zadan: 20
+
+Johnson:  Cmax = 2565	Czas = 00:00.7
+
+--Instancja 24--
+L. maszyn: 20	L. zadan: 20
+
+NEH:  Cmax = 2411	Czas = 00:00.2
+
+--Instancja 25--
+L. maszyn: 20	L. zadan: 20
+
+Johnson:  Cmax = 2524	Czas = 00:00.10
+
+--Instancja 25--
+L. maszyn: 20	L. zadan: 20
+
+NEH:  Cmax = 2262	Czas = 00:00.1
+
+--Instancja 26--
+L. maszyn: 20	L. zadan: 20
+
+Johnson:  Cmax = 2691	Czas = 00:00.5
+
+--Instancja 26--
+L. maszyn: 20	L. zadan: 20
+
+NEH:  Cmax = 2397	Czas = 00:00.1
+
+--Instancja 27--
+L. maszyn: 20	L. zadan: 20
+
+Johnson:  Cmax = 2480	Czas = 00:00.5
+
+--Instancja 27--
+L. maszyn: 20	L. zadan: 20
+
+NEH:  Cmax = 2349	Czas = 00:00.1
+
+--Instancja 28--
+L. maszyn: 20	L. zadan: 20
+
+Johnson:  Cmax = 2564	Czas = 00:00.19
+
+--Instancja 28--
+L. maszyn: 20	L. zadan: 20
+
+NEH:  Cmax = 2362	Czas = 00:00.1
+
+--Instancja 29--
+L. maszyn: 20	L. zadan: 20
+
+Johnson:  Cmax = 2526	Czas = 00:00.4
+
+--Instancja 29--
+L. maszyn: 20	L. zadan: 20
+
+NEH:  Cmax = 2249	Czas = 00:00.2
+
+--Instancja 30--
+L. maszyn: 20	L. zadan: 20
+
+Johnson:  Cmax = 2621	Czas = 00:00.11
+
+--Instancja 30--
+L. maszyn: 20	L. zadan: 20
+
+NEH:  Cmax = 2320	Czas = 00:00.1
+
+--Instancja 31--
+L. maszyn: 20	L. zadan: 20
+
+Johnson:  Cmax = 2575	Czas = 00:00.8
+
+--Instancja 31--
+L. maszyn: 20	L. zadan: 20
+
+NEH:  Cmax = 2277	Czas = 00:00.1
+
+--Instancja 32--
+L. maszyn: 5	L. zadan: 50
+
+Johnson:  Cmax = 2909	Czas = 00:00.20
+
+--Instancja 32--
+L. maszyn: 5	L. zadan: 50
+
+NEH:  Cmax = 2733	Czas = 00:00.4
+
+--Instancja 33--
+L. maszyn: 5	L. zadan: 50
+
+Johnson:  Cmax = 3140	Czas = 00:00.12
+
+--Instancja 33--
+L. maszyn: 5	L. zadan: 50
+
+NEH:  Cmax = 2843	Czas = 00:00.7
+
+--Instancja 34--
+L. maszyn: 5	L. zadan: 50
+
+Johnson:  Cmax = 2983	Czas = 00:00.13
+
+--Instancja 34--
+L. maszyn: 5	L. zadan: 50
+
+NEH:  Cmax = 2640	Czas = 00:00.3
+
+--Instancja 35--
+L. maszyn: 5	L. zadan: 50
+
+Johnson:  Cmax = 2958	Czas = 00:00.11
+
+--Instancja 35--
+L. maszyn: 5	L. zadan: 50
+
+NEH:  Cmax = 2782	Czas = 00:00.4
+
+--Instancja 36--
+L. maszyn: 5	L. zadan: 50
+
+Johnson:  Cmax = 3038	Czas = 00:00.18
+
+--Instancja 36--
+L. maszyn: 5	L. zadan: 50
+
+NEH:  Cmax = 2868	Czas = 00:00.14
+
+--Instancja 37--
+L. maszyn: 5	L. zadan: 50
+
+Johnson:  Cmax = 3031	Czas = 00:00.19
+
+--Instancja 37--
+L. maszyn: 5	L. zadan: 50
+
+NEH:  Cmax = 2850	Czas = 00:00.7
+
+--Instancja 38--
+L. maszyn: 5	L. zadan: 50
+
+Johnson:  Cmax = 2978	Czas = 00:00.15
+
+--Instancja 38--
+L. maszyn: 5	L. zadan: 50
+
+NEH:  Cmax = 2758	Czas = 00:00.6
+
+--Instancja 39--
+L. maszyn: 5	L. zadan: 50
+
+Johnson:  Cmax = 2835	Czas = 00:00.15
+
+--Instancja 39--
+L. maszyn: 5	L. zadan: 50
+
+NEH:  Cmax = 2721	Czas = 00:00.11
+
+--Instancja 40--
+L. maszyn: 5	L. zadan: 50
+
+Johnson:  Cmax = 2784	Czas = 00:00.18
+
+--Instancja 40--
+L. maszyn: 5	L. zadan: 50
+
+NEH:  Cmax = 2576	Czas = 00:00.7
+
+--Instancja 41--
+L. maszyn: 5	L. zadan: 50
+
+Johnson:  Cmax = 3020	Czas = 00:00.17
+
+--Instancja 41--
+L. maszyn: 5	L. zadan: 50
+
+NEH:  Cmax = 2790	Czas = 00:00.3
+
+--Instancja 42--
+L. maszyn: 10	L. zadan: 50
+
+Johnson:  Cmax = 3647	Czas = 00:00.11
+
+--Instancja 42--
+L. maszyn: 10	L. zadan: 50
+
+NEH:  Cmax = 3135	Czas = 00:00.14
+
+--Instancja 43--
+L. maszyn: 10	L. zadan: 50
+
+Johnson:  Cmax = 3306	Czas = 00:00.11
+
+--Instancja 43--
+L. maszyn: 10	L. zadan: 50
+
+NEH:  Cmax = 3032	Czas = 00:00.14
+
+--Instancja 44--
+L. maszyn: 10	L. zadan: 50
+
+Johnson:  Cmax = 3495	Czas = 00:00.12
+
+--Instancja 44--
+L. maszyn: 10	L. zadan: 50
+
+NEH:  Cmax = 2986	Czas = 00:00.9
+
+--Instancja 45--
+L. maszyn: 10	L. zadan: 50
+
+Johnson:  Cmax = 3565	Czas = 00:00.16
+
+--Instancja 45--
+L. maszyn: 10	L. zadan: 50
+
+NEH:  Cmax = 3198	Czas = 00:00.9
+
+--Instancja 46--
+L. maszyn: 10	L. zadan: 50
+
+Johnson:  Cmax = 3409	Czas = 00:00.12
+
+--Instancja 46--
+L. maszyn: 10	L. zadan: 50
+
+NEH:  Cmax = 3160	Czas = 00:00.7
+
+--Instancja 47--
+L. maszyn: 10	L. zadan: 50
+
+Johnson:  Cmax = 3456	Czas = 00:00.10
+
+--Instancja 47--
+L. maszyn: 10	L. zadan: 50
+
+NEH:  Cmax = 3178	Czas = 00:00.9
+
+--Instancja 48--
+L. maszyn: 10	L. zadan: 50
+
+Johnson:  Cmax = 3520	Czas = 00:00.7
+
+--Instancja 48--
+L. maszyn: 10	L. zadan: 50
+
+NEH:  Cmax = 3277	Czas = 00:00.10
+
+--Instancja 49--
+L. maszyn: 10	L. zadan: 50
+
+Johnson:  Cmax = 3579	Czas = 00:00.11
+
+--Instancja 49--
+L. maszyn: 10	L. zadan: 50
+
+NEH:  Cmax = 3123	Czas = 00:00.6
+
+--Instancja 50--
+L. maszyn: 10	L. zadan: 50
+
+Johnson:  Cmax = 3491	Czas = 00:00.19
+
+--Instancja 50--
+L. maszyn: 10	L. zadan: 50
+
+NEH:  Cmax = 3002	Czas = 00:00.11
+
+--Instancja 51--
+L. maszyn: 10	L. zadan: 50
+
+Johnson:  Cmax = 3601	Czas = 00:00.21
+
+--Instancja 51--
+L. maszyn: 10	L. zadan: 50
+
+NEH:  Cmax = 3257	Czas = 00:00.8
+
+--Instancja 52--
+L. maszyn: 20	L. zadan: 50
+
+Johnson:  Cmax = 4725	Czas = 00:00.10
+
+--Instancja 52--
+L. maszyn: 20	L. zadan: 50
+
+NEH:  Cmax = 4082	Czas = 00:00.21
+
+--Instancja 53--
+L. maszyn: 20	L. zadan: 50
+
+Johnson:  Cmax = 4399	Czas = 00:00.4
+
+--Instancja 53--
+L. maszyn: 20	L. zadan: 50
+
+NEH:  Cmax = 3921	Czas = 00:00.22
+
+--Instancja 54--
+L. maszyn: 20	L. zadan: 50
+
+Johnson:  Cmax = 4346	Czas = 00:00.12
+
+--Instancja 54--
+L. maszyn: 20	L. zadan: 50
+
+NEH:  Cmax = 3927	Czas = 00:00.23
+
+--Instancja 55--
+L. maszyn: 20	L. zadan: 50
+
+Johnson:  Cmax = 4495	Czas = 00:00.11
+
+--Instancja 55--
+L. maszyn: 20	L. zadan: 50
+
+NEH:  Cmax = 3969	Czas = 00:00.20
+
+--Instancja 56--
+L. maszyn: 20	L. zadan: 50
+
+Johnson:  Cmax = 4439	Czas = 00:00.22
+
+--Instancja 56--
+L. maszyn: 20	L. zadan: 50
+
+NEH:  Cmax = 3835	Czas = 00:00.28
+
+--Instancja 57--
+L. maszyn: 20	L. zadan: 50
+
+Johnson:  Cmax = 4267	Czas = 00:00.13
+
+--Instancja 57--
+L. maszyn: 20	L. zadan: 50
+
+NEH:  Cmax = 3914	Czas = 00:00.18
+
+--Instancja 58--
+L. maszyn: 20	L. zadan: 50
+
+Johnson:  Cmax = 4471	Czas = 00:00.8
+
+--Instancja 58--
+L. maszyn: 20	L. zadan: 50
+
+NEH:  Cmax = 3952	Czas = 00:00.35
+
+--Instancja 59--
+L. maszyn: 20	L. zadan: 50
+
+Johnson:  Cmax = 4374	Czas = 00:00.20
+
+--Instancja 59--
+L. maszyn: 20	L. zadan: 50
+
+NEH:  Cmax = 3938	Czas = 00:00.22
+
+--Instancja 60--
+L. maszyn: 20	L. zadan: 50
+
+Johnson:  Cmax = 4282	Czas = 00:00.12
+
+--Instancja 60--
+L. maszyn: 20	L. zadan: 50
+
+NEH:  Cmax = 3952	Czas = 00:00.19

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "BadaniaAlgorytmow/1.0.0": {
+        "dependencies": {
+          "Silnik": "1.0.0"
+        },
+        "runtime": {
+          "BadaniaAlgorytmow.dll": {}
+        }
+      },
+      "Silnik/1.0.0": {
+        "runtime": {
+          "Silnik.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BadaniaAlgorytmow/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Silnik/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
