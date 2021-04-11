@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie3\\BadaniaAlgorytmow\\BadaniaAlgorytmow.csproj": {}
+    "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\Engine.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie3\\BadaniaAlgorytmow\\BadaniaAlgorytmow.csproj": {
+    "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\Engine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie3\\BadaniaAlgorytmow\\BadaniaAlgorytmow.csproj",
-        "projectName": "BadaniaAlgorytmow",
-        "projectPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie3\\BadaniaAlgorytmow\\BadaniaAlgorytmow.csproj",
+        "projectUniqueName": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\Engine.csproj",
+        "projectName": "Engine",
+        "projectPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\Engine.csproj",
         "packagesPath": "C:\\Users\\jdudz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie3\\BadaniaAlgorytmow\\obj\\",
+        "outputPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jdudz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,11 +27,7 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {
-              "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie3\\Silnik\\Silnik.csproj": {
-                "projectPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie3\\Silnik\\Silnik.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -60,16 +56,6 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
-      }
-    },
-    "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie3\\Silnik\\Silnik.csproj": {
-      "restore": {
-        "projectUniqueName": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie3\\Silnik\\Silnik.csproj",
-        "projectName": "Silnik",
-        "projectPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie3\\Silnik\\Silnik.csproj"
-      },
-      "frameworks": {
-        "net48": {}
       }
     }
   }
