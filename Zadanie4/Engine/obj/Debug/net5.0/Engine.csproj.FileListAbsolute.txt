@@ -1,0 +1,12 @@
+C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\bin\Debug\net5.0\Engine.deps.json
+C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\bin\Debug\net5.0\Engine.dll
+C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\bin\Debug\net5.0\ref\Engine.dll
+C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\bin\Debug\net5.0\Engine.pdb
+C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\obj\Debug\net5.0\Engine.csprojAssemblyReference.cache
+C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\obj\Debug\net5.0\Engine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\obj\Debug\net5.0\Engine.AssemblyInfoInputs.cache
+C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\obj\Debug\net5.0\Engine.AssemblyInfo.cs
+C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\obj\Debug\net5.0\Engine.csproj.CoreCompileInputs.cache
+C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\obj\Debug\net5.0\Engine.dll
+C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\obj\Debug\net5.0\ref\Engine.dll
+C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\obj\Debug\net5.0\Engine.pdb
