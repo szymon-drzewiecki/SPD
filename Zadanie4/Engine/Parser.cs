@@ -94,8 +94,8 @@ namespace Engine
             if (nrInst != 0)
             {
                 outputFile.WriteLine("\n--Instancja " + nrInst.ToString() + "--\n" +
-                                        "L. maszyn: " + tasksMatrix.GetRow(0).Length.ToString() +
-                                        "\tL. zadan: " + tasksMatrix.GetColumn(0).Length.ToString() + "\n");
+                                        "L. maszyn: " + tasksMatrix.matrix.GetLength(1).ToString() +
+                                        "\tL. zadan: " + tasksMatrix.matrix.GetLength(0).ToString() + "\n");
             }
             outputFile.Write(algName + ":  " + "Cmax = " + cmax.ToString() + "\tCzas = ");
             outputFile.Write("{0:00}:{1:00}.{2}\n", ts.Minutes, ts.Seconds, ts.Milliseconds);
