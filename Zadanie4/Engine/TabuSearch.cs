@@ -64,8 +64,8 @@ namespace Engine
         static private List<int []> generateNeighbourhoodsMethod1(int[] currentPosition, int x)
         {
             List<int[]> neighbourhoods = new List<int[]>();
-            int length = currentPosition.Length;
-            int changingNumber = (x + 1) % length;
+            int changingNumber = (x + 1) % (currentPosition.Length-1);
+            changingNumber++;
 
             for (int i = 0; i < currentPosition.Length; i++)
             {
