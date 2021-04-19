@@ -7,7 +7,7 @@ namespace TabuSearch
         static void Main(string[] args)
         {
             Parser parser = new Parser("neh_data.txt");
-            int[,] taskMatrix = parser.LoadTasks(2);
+            int[,] taskMatrix = parser.LoadTasks(10);
             
             //----------------------
             int[] startingPoint = new int[taskMatrix.GetLength(0)];

@@ -95,7 +95,7 @@ namespace Engine
                 {
                     int[] _tmp = (int[])currentPosition.Clone();
                     int _tmpInt = _tmp[i];
-                    _tmp[i] = _tmp[_tmp.Length - i];
+                    _tmp[i] = _tmp[_tmp.Length - 1 - i];
                     _tmp[_tmp.Length - 1 - i] = _tmpInt;
 
                     neighbourhoods.Add(_tmp);
