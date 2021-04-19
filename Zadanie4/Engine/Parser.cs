@@ -31,7 +31,7 @@ namespace Engine
          */
         public int[,] LoadTasks(int noInstance)
         {
-            TaskMatrix<int> tasks = new TaskMatrix<int>(new int[1,1]);
+            int[,] tasks = new int[1,1];
             StreamWriter outputFile = File.CreateText("output.txt");
             int instanceCounter = 0;
             int taskCounter = 0;
@@ -56,7 +56,7 @@ namespace Engine
                     string[] _ = line.Split(' ');
                     if (!generalRead)
                     {
-                        tasks = new TaskMatrix<int>(new int[Int32.Parse(_[0]), Int32.Parse(_[1])]);
+                        tasks = new int[Int32.Parse(_[0]), Int32.Parse(_[1])];
                         machineNumber = Int32.Parse(_[1]);
                         generalRead = true;
                     }
@@ -64,7 +64,7 @@ namespace Engine
                     {
                         for (int i = 0; i < machineNumber; i++)
                         {
-                            tasks.matrix[taskCounter, i] = Int32.Parse(_[i]);
+                            tasks[taskCounter, i] = Int32.Parse(_[i]);
                         }
                         taskCounter++;
                     }
@@ -72,7 +72,7 @@ namespace Engine
             }
             outputFile.Close();
 
-            return tasks.matrix;
+            return tasks;
         }
 
         public void AppendCmaxAndSeq(int cmax, int[] sekwencja)
@@ -87,15 +87,15 @@ namespace Engine
             outputFile.Close();
         }
 
-        public static bool SaveTimeScore(Stopwatch sw, int cmax, TaskMatrix<int> tasksMatrix, string algName, int nrInst = 0)
+        public static bool SaveTimeScore(Stopwatch sw, int cmax, int[,] tasksMatrix, string algName, int nrInst = 0)
         {
             TimeSpan ts = sw.Elapsed;
             StreamWriter outputFile = File.AppendText("result.txt");
             if (nrInst != 0)
             {
                 outputFile.WriteLine("\n--Instancja " + nrInst.ToString() + "--\n" +
-                                        "L. maszyn: " + tasksMatrix.matrix.GetLength(1).ToString() +
-                                        "\tL. zadan: " + tasksMatrix.matrix.GetLength(0).ToString() + "\n");
+                                        "L. maszyn: " + tasksMatrix.GetLength(1).ToString() +
+                                        "\tL. zadan: " + tasksMatrix.GetLength(0).ToString() + "\n");
             }
             outputFile.Write(algName + ":  " + "Cmax = " + cmax.ToString() + "\tCzas = ");
             outputFile.Write("{0:00}:{1:00}.{2}\n", ts.Minutes, ts.Seconds, ts.Milliseconds);

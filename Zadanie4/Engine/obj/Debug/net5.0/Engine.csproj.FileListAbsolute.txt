@@ -10,3 +10,15 @@ C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\obj\Debug
 C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\obj\Debug\net5.0\Engine.dll
 C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\obj\Debug\net5.0\ref\Engine.dll
 C:\Users\jdudz\Documents\Semestr6\SPD\Gantt\Zadanie4\TabuSearch\Engine\obj\Debug\net5.0\Engine.pdb
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie4\Engine\bin\Debug\net5.0\Engine.deps.json
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie4\Engine\bin\Debug\net5.0\Engine.dll
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie4\Engine\bin\Debug\net5.0\ref\Engine.dll
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie4\Engine\bin\Debug\net5.0\Engine.pdb
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie4\Engine\obj\Debug\net5.0\Engine.csprojAssemblyReference.cache
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie4\Engine\obj\Debug\net5.0\Engine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie4\Engine\obj\Debug\net5.0\Engine.AssemblyInfoInputs.cache
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie4\Engine\obj\Debug\net5.0\Engine.AssemblyInfo.cs
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie4\Engine\obj\Debug\net5.0\Engine.csproj.CoreCompileInputs.cache
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie4\Engine\obj\Debug\net5.0\Engine.dll
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie4\Engine\obj\Debug\net5.0\ref\Engine.dll
+C:\Users\SzymonDrzewiecki\Source\Repos\szymon-drzewiecki\SPD\Zadanie4\Engine\obj\Debug\net5.0\Engine.pdb
