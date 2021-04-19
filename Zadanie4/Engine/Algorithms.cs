@@ -9,18 +9,19 @@ namespace Engine
     public class Algorithms
     {
 
-        public static int calculateTotalspan(int[,] taskMatrix, int[] taskOrder) { 
+        public static int calculateTotalspan(int[,] taskMatrix, int[] taskOrder)
+        {
             int Cmax = 0;
             var numberOfTasks = taskMatrix.GetLength(0);
             var numberOfMachines = taskMatrix.GetLength(1);
-            int[,] cMaxMatrix = new int[numberOfTasks+1, numberOfMachines+1];
-            for (int i = 1; i < numberOfTasks+1; i++)
+            int[,] cMaxMatrix = new int[numberOfTasks + 1, numberOfMachines + 1];
+            for (int i = 1; i < numberOfTasks + 1; i++)
             {
-                for (int z = 1; z < numberOfMachines+1; z++)
+                for (int z = 1; z < numberOfMachines + 1; z++)
                 {
-                    if ( cMaxMatrix [i-1, z] > cMaxMatrix [i, z - 1])
+                    if (cMaxMatrix[i - 1, z] > cMaxMatrix[i, z - 1])
                     {
-                        cMaxMatrix[i, z] += cMaxMatrix[i - 1, z] + taskMatrix[taskOrder[i - 1]-1, z - 1];
+                        cMaxMatrix[i, z] += cMaxMatrix[i - 1, z] + taskMatrix[taskOrder[i - 1] - 1, z - 1];
                     }
                     else
                     {
@@ -62,9 +63,6 @@ namespace Engine
 
             return tl;
         }
-
-        //GENERACJA SĄSIEDZTW
-
 
     }
 }

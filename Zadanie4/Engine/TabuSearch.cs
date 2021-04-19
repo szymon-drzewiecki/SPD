@@ -24,7 +24,7 @@ namespace Engine
                 {
                     case 1:
                         neighbourhoods = generateNeighbourhoodsMethod1(currentPoint, x);
-                            break;
+                        break;
 
                     case 2:
                         neighbourhoods = generateNeighbourhoodsMethod2(currentPoint);
