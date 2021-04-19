@@ -33,9 +33,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SzymonDrzewiecki\\source\\repos\\szymon-drzewiecki\\SPD\\Zadanie4\\TabuSearch\\TabuSearch.csproj",
-      "projectName": "TabuSearch",
-      "projectPath": "C:\\Users\\SzymonDrzewiecki\\source\\repos\\szymon-drzewiecki\\SPD\\Zadanie4\\TabuSearch\\TabuSearch.csproj",
+      "projectUniqueName": "C:\\Users\\SzymonDrzewiecki\\source\\repos\\szymon-drzewiecki\\SPD\\Zadanie4\\TabuSearch\\TS_console.csproj",
+      "projectName": "TS_console",
+      "projectPath": "C:\\Users\\SzymonDrzewiecki\\source\\repos\\szymon-drzewiecki\\SPD\\Zadanie4\\TabuSearch\\TS_console.csproj",
       "packagesPath": "C:\\Users\\SzymonDrzewiecki\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\SzymonDrzewiecki\\source\\repos\\szymon-drzewiecki\\SPD\\Zadanie4\\TabuSearch\\obj\\",
       "projectStyle": "PackageReference",

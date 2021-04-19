@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7Ybt7JoggNvjgyFvSIGvqdEgrvtbLhtMIQeM03DFn7/WZLVPfCI8WDpqH8uaAouP0hk4Tp42xJG8KBxN7djP+g==",
+  "dgSpecHash": "9VDNOW9Y5gtpuGASSvqperBVvxB6YRRojCFbnRlM8lte2lrRLYLJ90+PkVpX2RrvJ7/ZPynFFfaTunqOgGv3zg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SzymonDrzewiecki\\source\\repos\\szymon-drzewiecki\\SPD\\Zadanie4\\TabuSearch\\TabuSearch.csproj",
+  "projectFilePath": "C:\\Users\\SzymonDrzewiecki\\source\\repos\\szymon-drzewiecki\\SPD\\Zadanie4\\TabuSearch\\TS_console.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

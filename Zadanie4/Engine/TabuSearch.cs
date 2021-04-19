@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    class TabuSearch
+    public class TabuSearch
     {
         static public int[] tabuSearch(int [,] taskMatrix, int[] startingPoint, int methodNumber, int numOfIterations)
         {
@@ -61,10 +61,11 @@ namespace Engine
         }
 
         //Metoda 1 - autorski pomysł
-        static public List<int []> generateNeighbourhoodsMethod1(int[] currentPosition, int x)
+        static private List<int []> generateNeighbourhoodsMethod1(int[] currentPosition, int x)
         {
             List<int[]> neighbourhoods = new List<int[]>();
-            int changingNumber = x + 1 % currentPosition.Length;
+            int length = currentPosition.Length;
+            int changingNumber = (x + 1) % length;
 
             for (int i = 0; i < currentPosition.Length; i++)
             {
@@ -72,7 +73,7 @@ namespace Engine
                 else
                 {
                     int[] arrClone = (int[])currentPosition.Clone();
-                    int swapIndex = Array.IndexOf(currentPosition, currentPosition[i]);
+                    int swapIndex = Array.IndexOf(currentPosition, changingNumber);
                     int tmpHolder = currentPosition[i];
                     arrClone[i] = changingNumber;
                     arrClone[swapIndex] = tmpHolder;
@@ -84,7 +85,7 @@ namespace Engine
         }
 
         //Metoda 2 - cebulka
-        static public List<int[]> generateNeighbourhoodsMethod2(int[] currentPosition)
+        static private List<int[]> generateNeighbourhoodsMethod2(int[] currentPosition)
         {
             List<int[]> neighbourhoods = new List<int[]>();
 
