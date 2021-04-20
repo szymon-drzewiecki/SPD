@@ -29,6 +29,9 @@ namespace Engine
                     case 2:
                         neighbourhoods = generateNeighbourhoodsMethod2(currentPoint);
                         break;
+                    case 3:
+                        neighbourhoods = generateNeighbourhoodsMethod3(currentPoint);
+                        break;
                 }
 
                 int[] cmaxListInGeneration = new int[neighbourhoods.Count()];
@@ -101,6 +104,30 @@ namespace Engine
                     neighbourhoods.Add(_tmp);
                 }
             }
+            return neighbourhoods;
+        }
+
+        //Metoda 3 - zygzak
+        static private List<int[]> generateNeighbourhoodsMethod3(int[] currentPosition)
+        {
+            List<int[]> neighbourhoods = new List<int[]>();
+            int[] bounds = new int[2] { 0, currentPosition.Length - 1 };
+
+            for (int i = 0; i < currentPosition.Length - 1; i++)
+            {
+                int[] _tmpArray = (int[])currentPosition.Clone();
+                int _tmpInt = _tmpArray[bounds[0]];
+                _tmpArray[bounds[0]] = _tmpArray[bounds[1]];
+                _tmpArray[bounds[1]] = _tmpInt;
+
+                neighbourhoods.Add(_tmpArray);
+
+                if (Convert.ToBoolean(i % 2))
+                    bounds[0]++;
+                else
+                    bounds[1]--;
+            }
+
             return neighbourhoods;
         }
     }

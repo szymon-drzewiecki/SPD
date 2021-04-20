@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SzymonDrzewiecki\\source\\repos\\szymon-drzewiecki\\SPD\\Zadanie4\\Engine\\Engine.csproj": {}
+    "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\Engine.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SzymonDrzewiecki\\source\\repos\\szymon-drzewiecki\\SPD\\Zadanie4\\Engine\\Engine.csproj": {
+    "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\Engine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SzymonDrzewiecki\\source\\repos\\szymon-drzewiecki\\SPD\\Zadanie4\\Engine\\Engine.csproj",
+        "projectUniqueName": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\Engine.csproj",
         "projectName": "Engine",
-        "projectPath": "C:\\Users\\SzymonDrzewiecki\\source\\repos\\szymon-drzewiecki\\SPD\\Zadanie4\\Engine\\Engine.csproj",
-        "packagesPath": "C:\\Users\\SzymonDrzewiecki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SzymonDrzewiecki\\source\\repos\\szymon-drzewiecki\\SPD\\Zadanie4\\Engine\\obj\\",
+        "projectPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\Engine.csproj",
+        "packagesPath": "C:\\Users\\jdudz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\SzymonDrzewiecki\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\jdudz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
