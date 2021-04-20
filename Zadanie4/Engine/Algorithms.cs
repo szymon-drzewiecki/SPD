@@ -64,5 +64,13 @@ namespace Engine
             return tl;
         }
 
+        public static int[] shuffleOrder (int [] anyOrder)
+        {
+            int[] newRandomOrder = new int[anyOrder.Length];
+            Random rnd = new Random();
+            newRandomOrder = anyOrder.OrderBy(x => rnd.Next()).ToArray();
+            return newRandomOrder;
+        }
+
     }
 }

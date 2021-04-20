@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace TabuSearch
+namespace TS_console
 {
     class Program
     {
@@ -18,7 +18,6 @@ namespace TabuSearch
 
             Parser parser = new Parser("neh_data.txt");
             Stopwatch[] stopwatches = new Stopwatch[2] { new Stopwatch(), new Stopwatch() };
-
             #region Badanie algorytmow
             for(int i = nrInstancji; i<liczbaBadanychInstancji+1; i++)
             {
@@ -41,7 +40,7 @@ namespace TabuSearch
 
                 //Tabu Search
                 stopwatches[1].Start();
-                int[] seqTs = Engine.TabuSearch.tabuSearch(taskMatrix, startingPoint, nrMetodySasiedztwa, liczbaIteracji);
+                int[] seqTs = TabuSearch.tabuSearch(taskMatrix, startingPoint, nrMetodySasiedztwa, liczbaIteracji);
                 stopwatches[1].Stop();
 
                 int cMaxTs = Algorithms.calculateTotalspan(taskMatrix, seqTs);
