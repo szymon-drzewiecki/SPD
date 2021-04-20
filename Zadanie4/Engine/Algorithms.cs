@@ -12,12 +12,12 @@ namespace Engine
         public static int calculateTotalspan(int[,] taskMatrix, int[] taskOrder)
         {
             int Cmax = 0;
-            var numberOfTasks = taskMatrix.GetLength(0);
-            var numberOfMachines = taskMatrix.GetLength(1);
-            int[,] cMaxMatrix = new int[numberOfTasks + 1, numberOfMachines + 1];
-            for (int i = 1; i < numberOfTasks + 1; i++)
+            var liczbaZadan = taskOrder.Length;
+            var liczbaMaszyn = taskMatrix.GetLength(1);
+            int[,] cMaxMatrix = new int[liczbaZadan + 1, liczbaMaszyn + 1];
+            for (int i = 1; i < liczbaZadan + 1; i++)
             {
-                for (int z = 1; z < numberOfMachines + 1; z++)
+                for (int z = 1; z < liczbaMaszyn + 1; z++)
                 {
                     if (cMaxMatrix[i - 1, z] > cMaxMatrix[i, z - 1])
                     {
@@ -30,7 +30,7 @@ namespace Engine
                 }
             }
 
-            Cmax = cMaxMatrix[numberOfTasks, numberOfMachines];
+            Cmax = cMaxMatrix[liczbaZadan, liczbaMaszyn];
             return Cmax;
         }
 

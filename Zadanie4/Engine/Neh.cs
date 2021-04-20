@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    class Neh
+    public class Neh
     {
         public static int[] NehBasic(int[,] taskMatrix, List<Tuple<int, int>> tl)
         {

@@ -11,6 +11,7 @@ namespace Engine
     public class Parser
     {
         private string[] data;
+        private bool titleLock = false;
 
         /*
          * Inicjalizacja parsera wraz ze sciezka do pliku z ktorego maja byc
@@ -87,18 +88,32 @@ namespace Engine
             outputFile.Close();
         }
 
-        public static bool SaveTimeScore(Stopwatch sw, int cmax, int[,] tasksMatrix, string algName, int nrInst = 0)
+        public static bool SaveTimeScore(Stopwatch[] sWatches, int instanceNr, int[] cMaxes,
+            int[,] tasksMatrix, string[] algNames, int title = -1)
         {
-            TimeSpan ts = sw.Elapsed;
+            TimeSpan[] ts = new TimeSpan[2] { sWatches[0].Elapsed, sWatches[1].Elapsed };
             StreamWriter outputFile = File.AppendText("result.txt");
-            if (nrInst != 0)
+            if (title == 1)
             {
-                outputFile.WriteLine("\n--Instancja " + nrInst.ToString() + "--\n" +
-                                        "L. maszyn: " + tasksMatrix.GetLength(1).ToString() +
-                                        "\tL. zadan: " + tasksMatrix.GetLength(0).ToString() + "\n");
+                string headers = "NrInstancji\tl. maszyn\tl. zadan";
+                {
+                    string tmp = "";
+                    foreach (string aN in algNames)
+                    {
+                        tmp += "\t"+aN + "-cMax\t" + aN + "-Time";
+                    }
+                    headers += tmp;
+                }
+                outputFile.WriteLine(headers);
             }
-            outputFile.Write(algName + ":  " + "Cmax = " + cmax.ToString() + "\tCzas = ");
-            outputFile.Write("{0:00}:{1:00}.{2}\n", ts.Minutes, ts.Seconds, ts.Milliseconds);
+            outputFile.Write(instanceNr.ToString()+"\t"+ tasksMatrix.GetLength(1).ToString() + "\t"
+                + tasksMatrix.GetLength(0).ToString());
+            for(int i = 0; i<algNames.Length; i++)
+            {
+                outputFile.Write("\t"+cMaxes[i].ToString()+"\t"+ "{0:00}:{1:00}.{2}",
+                    ts[i].Minutes, ts[i].Seconds, ts[i].Milliseconds);
+            }
+            outputFile.Write("\n");
 
             outputFile.Flush();
             outputFile.Close();
