@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Engine/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Engine.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Engine.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Engine/1.0.0": {
+      "type": "project",
+      "path": "../Engine/Engine.csproj",
+      "msbuildProject": "../Engine/Engine.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Engine >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\jdudz\\.nuget\\packages\\": {}
@@ -13,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\Engine.csproj",
-      "projectName": "Engine",
-      "projectPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\Engine.csproj",
+      "projectUniqueName": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\TS_DifferenceMethod\\TS_DifferenceMethod.csproj",
+      "projectName": "TS_DifferenceMethod",
+      "projectPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\TS_DifferenceMethod\\TS_DifferenceMethod.csproj",
       "packagesPath": "C:\\Users\\jdudz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\obj\\",
+      "outputPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\TS_DifferenceMethod\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jdudz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\Engine.csproj": {
+              "projectPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\Engine.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

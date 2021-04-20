@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\TabuSearch\\TS_console.csproj": {}
+    "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\TS_Difference\\TS_Difference.csproj": {}
   },
   "projects": {
     "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\Engine\\Engine.csproj": {
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\TabuSearch\\TS_console.csproj": {
+    "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\TS_Difference\\TS_Difference.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\TabuSearch\\TS_console.csproj",
-        "projectName": "TS_console",
-        "projectPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\TabuSearch\\TS_console.csproj",
+        "projectUniqueName": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\TS_Difference\\TS_Difference.csproj",
+        "projectName": "TS_Difference",
+        "projectPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\TS_Difference\\TS_Difference.csproj",
         "packagesPath": "C:\\Users\\jdudz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\TabuSearch\\obj\\",
+        "outputPath": "C:\\Users\\jdudz\\Documents\\Semestr6\\SPD\\Gantt\\Zadanie4\\TS_Difference\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jdudz\\AppData\\Roaming\\NuGet\\NuGet.Config",

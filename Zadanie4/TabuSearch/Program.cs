@@ -17,8 +17,8 @@ namespace TS_console
             #endregion
 
             Parser parser = new Parser("neh_data.txt");
-            Stopwatch[] stopwatches = new Stopwatch[2] { new Stopwatch(), new Stopwatch() };
-            #region Badanie algorytmow
+            Stopwatch[] stopwatches = new Stopwatch[3] { new Stopwatch(), new Stopwatch(), new Stopwatch() };
+            #region Badanie algorytmow - poszczegolne algorytmy
             for(int i = nrInstancji; i<liczbaBadanychInstancji+1; i++)
             {
                 int[,] taskMatrix = parser.LoadTasks(i);
@@ -45,10 +45,17 @@ namespace TS_console
 
                 int cMaxTs = Algorithms.calculateTotalspan(taskMatrix, seqTs);
 
+                //Johnson
+                stopwatches[2].Start();
+                int[] seqJohn = Johnson.AlgorytmJohnsona(taskMatrix);
+                stopwatches[2].Stop();
+
+                int cMaxJohn = Algorithms.calculateTotalspan(taskMatrix, seqJohn);
+
                 //Zapisywanie wynikow
-                int[] cMaxes = { cMaxNeh, cMaxTs };
-                string[] aNames = { "Neh", "TS" };
-                Parser.SaveTimeScore(stopwatches, i, cMaxes, taskMatrix, aNames, i);
+                int[] cMaxes = { cMaxNeh, cMaxTs, cMaxJohn };
+                string[] aNames = { "Neh", "TS", "Johnson" };
+                Parser.SaveTimeScore("result.txt", stopwatches, i, cMaxes, taskMatrix, aNames, i);
 
                 //Resetowanie stoperow
                 foreach (Stopwatch sw in stopwatches)

@@ -15,7 +15,7 @@ namespace Engine
             int[] currentPoint = startingPoint;
             List<int[]> neighbourhoods = new List<int[]>();
             List<int[]> tabuList = new List<int[]>();
-            int[] theBestSoFar = new int[startingPoint.Length];
+            int[] theBestSoFar = startingPoint;
             int x = 0;
 
             while (x < numOfIterations)

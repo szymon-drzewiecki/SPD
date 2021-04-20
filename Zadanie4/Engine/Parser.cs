@@ -88,11 +88,13 @@ namespace Engine
             outputFile.Close();
         }
 
-        public static bool SaveTimeScore(Stopwatch[] sWatches, int instanceNr, int[] cMaxes,
+        public static bool SaveTimeScore(string filename, Stopwatch[] sWatches, int instanceNr, int[] cMaxes,
             int[,] tasksMatrix, string[] algNames, int title = -1)
         {
-            TimeSpan[] ts = new TimeSpan[2] { sWatches[0].Elapsed, sWatches[1].Elapsed };
-            StreamWriter outputFile = File.AppendText("result.txt");
+            TimeSpan[] ts = new TimeSpan[algNames.Length];
+            for (int i = 0; i < algNames.Length; i++)
+                ts[i] = sWatches[i].Elapsed;
+            StreamWriter outputFile = File.AppendText(filename);
             if (title == 1)
             {
                 string headers = "NrInstancji\tl. maszyn\tl. zadan";

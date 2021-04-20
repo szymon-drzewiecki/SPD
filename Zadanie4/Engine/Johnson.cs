@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    class Johnson
+    public class Johnson
     {
         public static int[,] Transpose(int[,] taskMatrix)
         {

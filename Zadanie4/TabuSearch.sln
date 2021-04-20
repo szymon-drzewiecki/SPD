@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TS_console", "TabuSearch\TS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Engine", "Engine\Engine.csproj", "{D0081A55-6F16-4EE4-A646-D716334C6EE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TS_DifferenceStarting", "TS_Difference\TS_DifferenceStarting.csproj", "{FCF27BAE-D06C-4217-AF46-8C7094287CEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TS_DifferenceMethod", "TS_DifferenceMethod\TS_DifferenceMethod.csproj", "{5ADA63DE-892D-48CE-ABC0-A0EE458C3E02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D0081A55-6F16-4EE4-A646-D716334C6EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0081A55-6F16-4EE4-A646-D716334C6EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0081A55-6F16-4EE4-A646-D716334C6EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCF27BAE-D06C-4217-AF46-8C7094287CEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCF27BAE-D06C-4217-AF46-8C7094287CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCF27BAE-D06C-4217-AF46-8C7094287CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCF27BAE-D06C-4217-AF46-8C7094287CEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ADA63DE-892D-48CE-ABC0-A0EE458C3E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ADA63DE-892D-48CE-ABC0-A0EE458C3E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ADA63DE-892D-48CE-ABC0-A0EE458C3E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ADA63DE-892D-48CE-ABC0-A0EE458C3E02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
