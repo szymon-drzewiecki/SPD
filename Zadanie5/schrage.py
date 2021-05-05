@@ -1,8 +1,12 @@
+import random
 import re
 import numpy as np
 
 #GLOBAL variables
 task_matrix = 0
+#heap
+heap = 0
+n = 0
 
 """
 Function used to load data from file.
@@ -25,6 +29,8 @@ def load_data(path, i_instance):
                    _counter += 1
                    
     global task_matrix
+    global heap
+    heap = np.empty(30, dtype=int)#np.empty(len(_matrix), dtype=int)
     task_matrix = np.array(_matrix)
 
 """
@@ -43,9 +49,57 @@ def calculate_cmax(pi):
 
     return Cmax
 
+"""
+Function used for pushing element into heap
+"""
+def heap_push(d):
+    global n
+    global heap
+    i = n
+    n += 1
+    j = (i - 1) // 2
+
+    while (i > 0 and heap[j] < d):
+        heap[i] = heap[j]
+        i = j
+        j = (i - 1) // 2
+
+    heap[i] = d
+
+"""
+Function used to remove the root of the heap
+"""
+def heap_pop():
+    global n
+    global heap
+
+    n -= 1
+    if n == 0:
+        v = heap[n]
+        i = 0
+        j = 0
+
+        while (j < n):
+            if (j+1 < n) and (heap[j+1] > heap[j]):
+                j += 1
+            if (v >= heap[j]):
+                break
+            heap[i] = heap[j]
+            i = j
+            j = 2 * j + 1
+
+        heap[i] = v
+
 #MAIN FUNCTION
 def main():
     load_data("schrage_data.txt", 0)
+
+    global n
+    global heap
+    for i in range(30):
+        r = random.randint(0, 50)
+        heap_push(r)
+        
     print("Finished...")
 
 #AVOIDING RUNNING CODE WHILE IMPORTING THIS MODULE
