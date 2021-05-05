@@ -64,7 +64,7 @@ def schrage(tasks):
             t += temporary[1]
         else:
             t = min(N)[0]
-    return pi;
+    return pi
 
 #MAIN FUNCTION
 def main():
