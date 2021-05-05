@@ -1,5 +1,7 @@
 import re
 import numpy as np
+import operator
+import copy
 
 #GLOBAL variables
 task_matrix = 0
@@ -26,6 +28,7 @@ def load_data(path, i_instance):
                    
     global task_matrix
     task_matrix = np.array(_matrix)
+    return _matrix
 
 """
 Function calculating the Cmax.
@@ -43,11 +46,32 @@ def calculate_cmax(pi):
 
     return Cmax
 
+def schrage(tasks):
+    pi = []
+    G = []
+    N = copy.deepcopy(tasks)
+    t = min(N)[0]
+    while (len(G) != 0 or len(N) != 0):
+        while(len(N) != 0 and min(N)[0] <= t):
+            j = N.index(min(N))
+            G.append(N[j])
+            del N[j]
+        if len(G) != 0:
+            j = G.index(max(G, key=operator.itemgetter(2)))
+            temporary = G[j]
+            del G[j]
+            pi.append(temporary)
+            t = t + temporary[1]
+        else:
+            t = min(N)[0]
+    return pi
+
 #MAIN FUNCTION
 def main():
     load_data("schrage_data.txt", 0)
     print("Finished...")
 
+    print(pi)
 #AVOIDING RUNNING CODE WHILE IMPORTING THIS MODULE
 if __name__ == '__main__':
     main()
