@@ -61,7 +61,7 @@ def schrage(tasks):
             temporary = G[j]
             del G[j]
             pi.append(temporary)
-            t = t + temporary[1]
+            t += temporary[1]
         else:
             t = min(N)[0]
 
