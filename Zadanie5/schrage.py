@@ -54,7 +54,6 @@ def calculate_cmax(pi):
 
     return Cmax
 
-<<<<<<< HEAD
 """
 Function for calculating Cmax from sorted array
 pi_array - list of tasks ordered in the best sequence
@@ -111,10 +110,7 @@ def heap_pop():
 
         heap[i] = v
 
-def schrage(tasks):                                                                                                  
-=======
 def schrage(tasks):
->>>>>>> main
     pi = []
     G = []
     N = copy.deepcopy(tasks)
@@ -122,29 +118,16 @@ def schrage(tasks):
     while (len(G) != 0 or len(N) != 0):
         while(len(N) != 0 and min(N)[0] <= t):
             j = N.index(min(N))
-<<<<<<< HEAD
             G.append(N.pop(j))
         if len(G) != 0:
             j = G.index(max(G, key=operator.itemgetter(2)))
             temporary = G.pop(j)
-=======
-            G.append(N[j])
-            del N[j]
-        if len(G) != 0:
-            j = G.index(max(G, key=operator.itemgetter(2)))
-            temporary = G[j]
-            del G[j]
->>>>>>> main
             pi.append(temporary)
             t += temporary[1]
         else:
             t = min(N)[0]
     return pi
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> main
 #MAIN FUNCTION
 def main():
     load_data("schrage_data.txt", 4)
