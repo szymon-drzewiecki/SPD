@@ -39,26 +39,10 @@ def load_data(path, i_instance):
     return _matrix
 
 """
-Function calculating the Cmax.
-pi - sequence in which the tasks are being executed
-"""
-def calculate_cmax(pi):
-    global task_matrix
-    S = task_matrix[pi[0]-1][0]
-    C = S + task_matrix[pi[0]-1][1]
-    Cmax = C + task_matrix[pi[0]-1][2]
-    for i in range(1, task_matrix.shape[0]):
-        S = max(task_matrix[pi[i]-1][0], C)
-        C = S + task_matrix[pi[i]-1][1]
-        Cmax = max(Cmax, C + task_matrix[pi[i]-1][2])
-
-    return Cmax
-
-"""
 Function for calculating Cmax from sorted array
 pi_array - list of tasks ordered in the best sequence
 """
-def calculate_cmax_list(pi_list):
+def calculate_cmax(pi_list):
     S = pi_list[0][0]
     C = S + pi_list[0][1]
     Cmax = C + pi_list[0][2]
@@ -130,9 +114,9 @@ def schrage(tasks):
 
 #MAIN FUNCTION
 def main():
-    load_data("schrage_data.txt", 4)
+    load_data("schrage_data.txt", 0)
     global task_matrix
-    print(calculate_cmax_list(schrage(task_matrix.tolist())))
+    print(calculate_cmax(schrage(task_matrix.tolist())))
     print("Finished...")
 
 #AVOIDING RUNNING CODE WHILE IMPORTING THIS MODULE
