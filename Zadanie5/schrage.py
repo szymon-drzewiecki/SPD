@@ -30,7 +30,7 @@ def load_data(path, i_instance):
                    
     global task_matrix
     global heap
-    heap = np.empty(30, dtype=int)#np.empty(len(_matrix), dtype=int)
+    heap = np.empty(len(_matrix), dtype=int)
     task_matrix = np.array(_matrix)
 
 """
@@ -93,13 +93,6 @@ def heap_pop():
 #MAIN FUNCTION
 def main():
     load_data("schrage_data.txt", 0)
-
-    global n
-    global heap
-    for i in range(30):
-        r = random.randint(0, 50)
-        heap_push(r)
-        
     print("Finished...")
 
 #AVOIDING RUNNING CODE WHILE IMPORTING THIS MODULE
