@@ -1,4 +1,6 @@
 import random
+import operator
+import copy
 import re
 import numpy as np
 
@@ -25,7 +27,7 @@ def load_data(path, i_instance):
             if _rpqs:
                if len(_rpqs) == 3 and _counter == i_instance+1:
                    _matrix.append(_rpqs)
-               elif len(_rpqs) == 1:
+               elif len(_rpqs) < 3:
                    _counter += 1
                    
     global task_matrix
@@ -46,6 +48,21 @@ def calculate_cmax(pi):
         S = max(task_matrix[pi[i]-1][0], C)
         C = S + task_matrix[pi[i]-1][1]
         Cmax = max(Cmax, C + task_matrix[pi[i]-1][2])
+
+    return Cmax
+
+"""
+Function for calculating Cmax from sorted array
+pi_array - list of tasks ordered in the best sequence
+"""
+def calculate_cmax_list(pi_list):
+    S = pi_list[0][0]
+    C = S + pi_list[0][1]
+    Cmax = C + pi_list[0][2]
+    for i in range(1, len(pi_list)):
+        S = max(pi_list[i][0], C)
+        C = S + pi_list[i][1]
+        Cmax = max(Cmax, C + pi_list[i][2])
 
     return Cmax
 
@@ -90,9 +107,29 @@ def heap_pop():
 
         heap[i] = v
 
+def schrage(tasks):                                                                                                  
+    pi = []
+    G = []
+    N = copy.deepcopy(tasks)
+    t = min(N)[0]
+    while (len(G) != 0 or len(N) != 0):
+        while(len(N) != 0 and min(N)[0] <= t):
+            j = N.index(min(N))
+            G.append(N.pop(j))
+        if len(G) != 0:
+            j = G.index(max(G, key=operator.itemgetter(2)))
+            temporary = G.pop(j)
+            pi.append(temporary)
+            t += temporary[1]
+        else:
+            t = min(N)[0]
+    return pi
+    
 #MAIN FUNCTION
 def main():
-    load_data("schrage_data.txt", 0)
+    load_data("schrage_data.txt", 4)
+    global task_matrix
+    print(calculate_cmax_list(schrage(task_matrix.tolist())))
     print("Finished...")
 
 #AVOIDING RUNNING CODE WHILE IMPORTING THIS MODULE
