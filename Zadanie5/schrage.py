@@ -64,14 +64,13 @@ def schrage(tasks):
             t += temporary[1]
         else:
             t = min(N)[0]
-
+    return pi;
 
 #MAIN FUNCTION
 def main():
     load_data("schrage_data.txt", 0)
     print("Finished...")
 
-    print(pi)
 #AVOIDING RUNNING CODE WHILE IMPORTING THIS MODULE
 if __name__ == '__main__':
     main()
