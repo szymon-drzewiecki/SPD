@@ -15,7 +15,7 @@ n = 0
 """
 Function used to load data from file.
 path - path to the file
-i_instance - number of wanted instance (starting from 0)
+i_instance - number of wanted instance (starting from 0) 
 """
 def load_data(path, i_instance):
     _counter = 0
