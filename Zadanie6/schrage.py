@@ -28,7 +28,7 @@ def load_data(path, i_instance):
 
 # SCHRAGE
 def schrage(tg):
-    start = time.perf_counter()
+
 
     pi = TaskGroup()
     Ng = TaskGroup()
@@ -47,15 +47,11 @@ def schrage(tg):
 
     Cmax = pi.cmax()
 
-    stop = time.perf_counter()
-    schrageTime = (stop - start)
-
-    return schrageTime, Cmax, pi
+    return Cmax, pi
 
 
 # SCHRAGE PMTN
 def schrage_pmtn(tg):
-    start = time.perf_counter()
 
     Cmax = 0
     tgc = copy.deepcopy(tg)
@@ -81,19 +77,15 @@ def schrage_pmtn(tg):
             Cmax = max(Cmax, t + Ng.group[j].q)
             Ng.pop(j)
 
-    stop = time.perf_counter()
-    schragePtmnTime = (stop - start)
-
-    return schragePtmnTime, Cmax
+    return Cmax
 
 
 # SCHRAGE [HEAP]
 def hschrage(tg):
-    start = time.perf_counter()
 
     pi = TaskGroup()
-    Ng = Heap_MaxQ(len(tg.group))
-    Nn = Heap_MinR(len(tg.group))
+    Ng = Heap(len(tg.group), max, 'q')
+    Nn = Heap(len(tg.group), min, 'r')
     Nn.tg_import(tg)
     t = Nn.root().r
     x = 0
@@ -109,20 +101,16 @@ def hschrage(tg):
             pi.add(j, Task(Ng.pop().rpq()))
     HCmax = pi.cmax()
 
-    stop = time.perf_counter()
-    hschrageTime = (stop - start)
-
-    return hschrageTime, HCmax, pi
+    return HCmax, pi
 
 
 # SCHRAGE PMTN [HEAP]
 def hschrage_pmtn(tg):
-    start = time.perf_counter()
 
     Cmax = 0
     tgc = copy.deepcopy(tg)
-    Ng = Heap_MaxQ(len(tg.group))
-    Nn = Heap_MinR(len(tg.group))
+    Ng = Heap(len(tg.group), max, 'q')
+    Nn = Heap(len(tg.group), min, 'r')
     Nn.tg_import(tg)
     t = 0
     l = 1
@@ -143,10 +131,8 @@ def hschrage_pmtn(tg):
             t = t + Ng.root().p
             Cmax = max(Cmax, t + Ng.root().q)
             Ng.pop()
-    stop = time.perf_counter()
-    hschragePtmnTime = (stop - start)
 
-    return hschragePtmnTime, Cmax
+    return Cmax
 
 
 # MAIN FUNCTION
@@ -155,62 +141,64 @@ def main():
     tg100 = load_data("in100.txt", 0)
     tg200 = load_data("in200.txt", 0)
 
-    schrageTime50, Cmax50, pi50 = schrage(tg50)
-    schragePtmnTime50, cmax_pmtn50 = schrage_pmtn(tg50)
-    hschrageTime50, HCmax50, hpi50 = hschrage(tg50)
-    hschragePtmnTime50, hcmax_pmtn50 = hschrage_pmtn(tg50)
-    schrageTime100, Cmax100, pi100 = schrage(tg100)
-    schragePtmnTime100, cmax_pmtn100 = schrage_pmtn(tg100)
-    hschrageTime100, HCmax100, hpi100 = hschrage(tg100)
-    hschragePtmnTime100, hcmax_pmtn100 = hschrage_pmtn(tg100)
-    schrageTime200, Cmax200, pi200 = schrage(tg200)
-    schragePtmnTime200, cmax_pmtn200 = schrage_pmtn(tg200)
-    hschrageTime200, HCmax200, hpi200 = hschrage(tg200)
-    hschragePtmnTime200, hcmax_pmtn200 = hschrage_pmtn(tg200)
+    Cmax50, pi50 = schrage(tg50)
+    cmax_pmtn50 = schrage_pmtn(tg50)
+    HCmax50, hpi50 = hschrage(tg50)
+    hcmax_pmtn50 = hschrage_pmtn(tg50)
+    Cmax100, pi100 = schrage(tg100)
+    cmax_pmtn100 = schrage_pmtn(tg100)
+    HCmax100, hpi100 = hschrage(tg100)
+    hcmax_pmtn100 = hschrage_pmtn(tg100)
+    Cmax200, pi200 = schrage(tg200)
+    cmax_pmtn200 = schrage_pmtn(tg200)
+    HCmax200, hpi200 = hschrage(tg200)
+    hcmax_pmtn200 = hschrage_pmtn(tg200)
+
+
     print("\n50 zadan:\n")
-    print("Cmax:", Cmax50, "\ttime execution:", schrageTime50)
-    print("Cmax pmtn:", cmax_pmtn50, "\ttime execution:", schragePtmnTime50)
-    print("H Cmax:", HCmax50, "\ttime execution:", hschrageTime50)
-    print("H Cmax pmtn:", hcmax_pmtn50, "\ttime execution:", hschragePtmnTime50)
+    #print("Cmax:", Cmax50, "\ttime execution:", schrageTime50)
+    #print("Cmax pmtn:", cmax_pmtn50, "\ttime execution:", schragePtmnTime50)
+    #print("H Cmax:", HCmax50, "\ttime execution:", hschrageTime50)
+    #print("H Cmax pmtn:", hcmax_pmtn50, "\ttime execution:", hschragePtmnTime50)
     print("-" * 50)
     #-------------------------------------------------
     print("\n100 zadan:\n")
-    print("Cmax:", Cmax100, "\ttime execution:", schrageTime100)
-    print("Cmax pmtn:", cmax_pmtn100, "\ttime execution:", schragePtmnTime100)
-    print("H Cmax:", HCmax100, "\ttime execution:", hschrageTime100)
-    print("H Cmax pmtn:", hcmax_pmtn100, "\ttime execution:", hschragePtmnTime100)
+    #print("Cmax:", Cmax100, "\ttime execution:", schrageTime100)
+    #print("Cmax pmtn:", cmax_pmtn100, "\ttime execution:", schragePtmnTime100)
+    #print("H Cmax:", HCmax100, "\ttime execution:", hschrageTime100)
+    #print("H Cmax pmtn:", hcmax_pmtn100, "\ttime execution:", hschragePtmnTime100)
     print("-" * 50)
     # -------------------------------------------------
     print("\n200 zadan:\n")
-    print("Cmax:", Cmax200, "\ttime execution:", schrageTime200)
-    print("Cmax pmtn:", cmax_pmtn200, "\ttime execution:", schragePtmnTime200)
-    print("H Cmax:", HCmax200, "\ttime execution:", hschrageTime200)
-    print("H Cmax pmtn:", hcmax_pmtn200, "\ttime execution:", hschragePtmnTime200)
+    #print("Cmax:", Cmax200, "\ttime execution:", schrageTime200)
+    #print("Cmax pmtn:", cmax_pmtn200, "\ttime execution:", schragePtmnTime200)
+    #print("H Cmax:", HCmax200, "\ttime execution:", hschrageTime200)
+    #print("H Cmax pmtn:", hcmax_pmtn200, "\ttime execution:", hschragePtmnTime200)
     print("-" * 50)
     # -------------------------------------------------
     plot1 = plt.figure(1)
     x = ["50","100","200"]
-    y = [schrageTime50,schrageTime100,schrageTime200]
-    z = [hschrageTime50, hschrageTime100, hschrageTime200]
-    plt.plot(x, y)
-    plt.plot(x, z)
-    plt.title("Czasy wykonywania się algorytmu Schrage")
-    plt.xlabel("Liczba zadań")
-    plt.ylabel("Czas")
-    plt.legend(["Zwykły Schrage","Schrage z kopcem"])
+    #y = [schrageTime50,schrageTime100,schrageTime200]
+    #z = [hschrageTime50, hschrageTime100, hschrageTime200]
+    #plt.plot(x, y)
+    #plt.plot(x, z)
+    #plt.title("Czasy wykonywania się algorytmu Schrage")
+    #plt.xlabel("Liczba zadań")
+    #plt.ylabel("Czas")
+    #plt.legend(["Zwykły Schrage","Schrage z kopcem"])
     # -------------------------------------------------
     plot2 = plt.figure(2)
-    x1 = ["50", "100", "200"]
-    y1 = [schragePtmnTime50, schragePtmnTime100, schragePtmnTime200]
-    z1 = [hschragePtmnTime50, hschragePtmnTime100, hschragePtmnTime200]
-    plt.plot(x1, y1)
-    plt.plot(x1, z1)
-    plt.title("Czasy wykonywania się algorytmu Schrage z przerwaniami")
-    plt.xlabel("Liczba zadań")
-    plt.ylabel("Czas")
-    plt.legend(["Schrage z przewaniami", "Schrage z przerwaniami z kopcem"])
-    plt.show()
-    plt.show()
+    #x1 = ["50", "100", "200"]
+    #y1 = [schragePtmnTime50, schragePtmnTime100, schragePtmnTime200]
+    #z1 = [hschragePtmnTime50, hschragePtmnTime100, hschragePtmnTime200]
+    #plt.plot(x1, y1)
+    #plt.plot(x1, z1)
+    #plt.title("Czasy wykonywania się algorytmu Schrage z przerwaniami")
+    #plt.xlabel("Liczba zadań")
+    #plt.ylabel("Czas")
+    #plt.legend(["Schrage z przewaniami", "Schrage z przerwaniami z kopcem"])
+    #plt.show()
+    #plt.show()
     print("\nScript finished...")
 
 # AVOIDING RUNNING CODE WHILE IMPORTING THIS MODULE

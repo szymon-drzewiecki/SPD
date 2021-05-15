@@ -51,6 +51,59 @@ class TaskGroup:
             s += str(nr) + ". " + str(t) + "\n"
         return s
 
+    def __getitem__(self, task_number):
+        return self.group[task_number]
+
+    def find_b(self):
+        b_key = 0
+        C = 0
+        dict = {}
+        Cmax = self.cmax()
+        for key, value in self.group.items():
+            if C < value.r:
+                C = value.r
+            C = C + value.p
+            if C + value.q == Cmax:
+                b_key = key
+        dict[b_key] = self.group[b_key]
+        return dict
+
+    def find_c(self, a, b):
+        key_a = list(b.key())[0]
+        key_b = list(b.key())[0]
+        key_list = list(self.group.keys())
+        value_list = list(self.group.values())
+        index_a = key_list.index(key_a)
+        index_b = key_list.index(key_b)
+        index_c = 0
+        dict = {}
+        for i in range(index_a, index_b):
+            if value_list[i].q < value_list[index_b].q:
+                index_c = i
+        dict[key_list[index_c]] = value_list[index_c]
+        return dict
+
+    def find_a(self, a, b):
+        sigma = 0
+        Cmax = self.cmax()
+        key_a = list(a.key())[0]
+        key_b = list(b.key())[0]
+        key_list = list(self.group.keys())
+        value_list = list(self.group.values())
+        index_a = key_list.index(key_a)
+        index_b = key_list.index(key_b)
+        dict = {}
+
+        for key, value in self.group.items():
+            for i in range(key, index_b):
+                sigma += value.p
+            if Cmax == value_list[key].r + sigma + value_list[key_b].q:
+                key_a = key
+                return key_a
+            if key == key_b:
+                key_a = key
+                return key_a
+
 
 class HTask:
     def __init__(self, nr, rpq):
@@ -65,17 +118,42 @@ class HTask:
     def __str__(self):
         return f"{self.nr}. {self.r} {self.p} {self.q}"
 
-
-class Heap_MaxQ:
-    def __init__(self, size):
+class Heap:
+    def __init__(self, size, heap_type, w_rpq):
         self.n = 0
         self.data = [None] * size
+        self.heap_type = heap_type
+        self.w_rpq = w_rpq
+
+    def comp(self, dt, ht, nr):
+        comp_ht = None
+        comp_dt = None
+        if self.w_rpq == 'r':
+            comp_ht = ht.r
+            comp_dt = dt.r
+        elif self.w_rpq == 'p':
+            comp_ht = ht.p
+            comp_dt = dt.p
+        else:
+            comp_ht = ht.q
+            comp_dt = dt.q
+
+        if nr == 0:
+            if self.heap_type is min:
+                return comp_dt > comp_ht
+            else:
+                return comp_dt < comp_ht
+        else:
+            if self.heap_type is min:
+                return comp_dt >= comp_ht
+            else:
+                return comp_dt <= comp_ht
 
     def push(self, ht):
         i = self.n
         self.n += 1
-        j = (i - 1) // 2
-        while i > 0 and self.data[j].q < ht.q:
+        j = (i -1) // 2
+        while i > 0 and self.comp(self.data[j], ht, 0):
             self.data[i] = self.data[j]
             i = j
             j = (i - 1) // 2
@@ -90,9 +168,9 @@ class Heap_MaxQ:
         i = 0
         j = 1
         while j < self.n:
-            if (j + 1 < self.n) and (self.data[j + 1].q > self.data[j].q):
+            if (j + 1 < self.n) and self.comp(self.data[j], self.data[j + 1], 0):
                 j += 1
-            if ht.q >= self.data[j].q:
+            if self.comp(self.data[j], ht, 1):
                 break
             self.data[i] = self.data[j]
             i = j
@@ -113,56 +191,10 @@ class Heap_MaxQ:
         s = ""
         for t in self.data:
             if t != None:
-                s += str(t.q) + ", "
-        return s
-
-
-class Heap_MinR:
-    def __init__(self, size):
-        self.n = 0
-        self.data = [None] * size
-
-    def push(self, ht):
-        i = self.n
-        self.n += 1
-        j = (i - 1) // 2
-        while i > 0 and self.data[j].r > ht.r:
-            self.data[i] = self.data[j]
-            i = j
-            j = (i - 1) // 2
-        self.data[i] = ht
-
-    def pop(self):
-        if self.n == 0:
-            return None
-        r = self.data[0]
-        self.n -= 1
-        ht = self.data[self.n]
-        i = 0
-        j = 1
-        while j < self.n:
-            if (j + 1 < self.n) and (self.data[j + 1].r < self.data[j].r):
-                j += 1
-            if ht.r <= self.data[j].r:
-                break
-            self.data[i] = self.data[j]
-            i = j
-            j = 2 * j + 1
-        self.data[i] = ht
-        self.data[self.n] = None
-
-        return r
-
-    def root(self):
-        return self.data[0]
-
-    def tg_import(self, tg):
-        for nr, t in tg.group.items():
-            self.push(HTask(nr, t.rpq()))
-
-    def __str__(self):
-        s = ""
-        for t in self.data:
-            if t != None:
-                s += str(t.r) + ", "
+                if self.w_rpq == 'r':
+                    s += str(t.r) + ", "
+                elif self.w_rpq == 'p':
+                    s += str(t.p) + ", "
+                else:
+                    s += str(t.q) + ", "
         return s
