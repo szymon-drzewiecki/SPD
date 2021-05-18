@@ -83,26 +83,27 @@ class TaskGroup:
         dict[key_list[index_c]] = value_list[index_c]
         return dict
 
-    def find_a(self, a, b):
+    def find_a(self, b):
         sigma = 0
         Cmax = self.cmax()
-        key_a = list(a.key())[0]
-        key_b = list(b.key())[0]
+        key_a = 0
+        key_b = list(b.keys())[0]
         key_list = list(self.group.keys())
         value_list = list(self.group.values())
-        index_a = key_list.index(key_a)
         index_b = key_list.index(key_b)
         dict = {}
 
         for key, value in self.group.items():
-            for i in range(key, index_b):
-                sigma += value.p
-            if Cmax == value_list[key].r + sigma + value_list[key_b].q:
+            for i in range(key_list.index(key), index_b):
+                sigma += value_list[i].p
+            if value.r + sigma + value_list[index_b].q:
                 key_a = key
-                return key_a
+                dict[key_a] = self.group[key]
+                return dict
             if key == key_b:
                 key_a = key
-                return key_a
+                dict[key_a] = self.group[key]
+                return dict
 
 
 class HTask:
