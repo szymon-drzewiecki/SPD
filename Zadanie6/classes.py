@@ -1,3 +1,5 @@
+import math
+
 class Task:
     def __init__(self, rpq):
         self.r = rpq[0]
@@ -55,57 +57,57 @@ class TaskGroup:
         return self.group[task_number]
 
     def find_b(self):
-        b_key = 0
         C = 0
-        dict = {}
-        Cmax = self.cmax()
-        for key, value in self.group.items():
-            if C < value.r:
-                C = value.r
-            C = C + value.p
-            if C + value.q == Cmax:
-                b_key = key
-        dict[b_key] = self.group[b_key]
-        return dict
+        for k, v in self.group.items():
+            if v.r > C:
+                C = v.r
+            C += v.p
+            if C + v.q == self.cmax():
+                return k
+        return None
 
     def find_c(self, a, b):
-        key_a = list(b.key())[0]
-        key_b = list(b.key())[0]
-        key_list = list(self.group.keys())
-        value_list = list(self.group.values())
-        index_a = key_list.index(key_a)
-        index_b = key_list.index(key_b)
-        index_c = 0
-        dict = {}
-        for i in range(index_a, index_b):
-            if value_list[i].q < value_list[index_b].q:
-                index_c = i
-        dict[key_list[index_c]] = value_list[index_c]
-        return dict
+        pi_slice = {i: self.group[i].q for i in list(self.group.keys())[
+            list(self.group.keys()).index(a)
+            :
+            list(self.group.keys()).index(b)+1]}
+        _cs = {}
+        for k, v in pi_slice.items():
+            if v < pi_slice[b]:
+                _cs[k] = v
 
-    def find_a(self, b):
-        sigma = 0
-        Cmax = self.cmax()
-        key_a = 0
-        key_b = list(b.keys())[0]
-        key_list = list(self.group.keys())
-        value_list = list(self.group.values())
-        index_b = key_list.index(key_b)
-        dict = {}
+        if len(_cs) == 0:
+            return None
+        else:
+            return list(_cs.keys())[-1]
 
-        for key, value in self.group.items():
-            for i in range(key_list.index(key), index_b):
-                sigma += value_list[i].p
-            if value.r + sigma + value_list[index_b].q:
-                key_a = key
-                dict[key_a] = self.group[key]
-                return dict
-            if key == key_b:
-                key_a = key
-                dict[key_a] = self.group[key]
-                return dict
+    def find_a(self, b): #do lookniecia
+        for k, v in self.group.items():
+            _p = [i.p for i in list(self.group.values())[
+                list(self.group.keys()).index(k)
+                :
+                list(self.group.keys()).index(b)+1]]
+            
+            if v.r + sum(_p) + self.group[b].q == self.cmax():
+                return k
+        return None
 
+    def get_K(self, c, b, with_c=False):
+        K = {i: self.group[i] for i in list(self.group.keys())[
+            list(self.group.keys()).index(c)+int(not with_c)
+            :
+            list(self.group.keys()).index(b)+1]}
+        rK = qK = math.inf
+        pK = 0
+        for k, v in K.items():
+            if v.r < rK:
+                rK = v.r
+            if v.q < qK:
+                qK = v.q
+            pK += v.p
 
+        return [rK, pK, qK]
+    
 class HTask:
     def __init__(self, nr, rpq):
         self.nr = nr
