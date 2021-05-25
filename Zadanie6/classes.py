@@ -54,33 +54,36 @@ class TaskGroup:
     def __getitem__(self, task_number):
         return self.group[task_number]
 
-    def find_b(self):
-        b_key = 0
-        C = 0
-        dict = {}
-        Cmax = self.cmax()
-        for key, value in self.group.items():
-            if C < value.r:
-                C = value.r
-            C = C + value.p
-            if C + value.q == Cmax:
-                b_key = key
-        dict[b_key] = self.group[b_key]
-        return dict
 
+    def find_b(self, Cmax):
+        C = 0
+        b_key = None
+        for i in list(self.group.keys()):
+            if C < self.group[i].r:
+                C = self.group[i].r
+            C = C + self.group[i].p
+            if C + self.group[i].q == Cmax:
+                return {i: self.group[i]}
+
+
+    def find_kurwA(self, b, Cmax):
+
+        return dict
     def find_c(self, a, b):
-        key_a = list(b.key())[0]
-        key_b = list(b.key())[0]
+        key_a = list(a.keys())[0]
+        key_b = list(b.keys())[0]
         key_list = list(self.group.keys())
         value_list = list(self.group.values())
         index_a = key_list.index(key_a)
         index_b = key_list.index(key_b)
-        index_c = 0
+        index_c = None
         dict = {}
-        for i in range(index_a, index_b):
+        for i in range(index_a, index_b+1):
             if value_list[i].q < value_list[index_b].q:
                 index_c = i
-        dict[key_list[index_c]] = value_list[index_c]
+        if index_c != None:
+            dict[key_list[index_c]] = value_list[index_c]
+
         return dict
 
     def find_a(self, b):
@@ -92,9 +95,8 @@ class TaskGroup:
         value_list = list(self.group.values())
         index_b = key_list.index(key_b)
         dict = {}
-
         for key, value in self.group.items():
-            for i in range(key_list.index(key), index_b):
+            for i in range(key_list.index(key), index_b+1):
                 sigma += value_list[i].p
             if value.r + sigma + value_list[index_b].q:
                 key_a = key
@@ -105,6 +107,70 @@ class TaskGroup:
                 dict[key_a] = self.group[key]
                 return dict
 
+    def find_a2(self, b, Cmax):
+        sigma = 0
+        key_b = list(b.keys())[0]
+        key_list = list(self.group.keys())
+        value_list = list(self.group.values())
+        index_b = key_list.index(key_b)
+        a=0
+        dict = {}
+        for i in range(0,index_b+1):
+            sigma += value_list[i].p
+        while a < index_b and not Cmax == value_list[a].r + sigma + value_list[index_b].q:
+            sigma -= (value_list[a].p)
+            a += 1
+        dict[a] = self.group[a]
+        return dict
+
+    def find_K_params(self, b, c):
+        key_c = list(c.keys())[0]
+        key_b = list(b.keys())[0]
+        key_list = list(self.group.keys())
+        value_list = list(self.group.values())
+        index_c = key_list.index(key_c)
+        index_b = key_list.index(key_b)
+        p_prim = 0
+        r_prim = value_list[index_c+1].r
+        q_prim = value_list[index_c+1].q
+        for i in range(index_c+1, index_b+1):
+            p_prim += value_list[i].p
+            r_prim = min(value_list[i].r, r_prim)
+            q_prim = min(value_list[i].q, q_prim)
+
+        return r_prim, p_prim, q_prim
+
+    def find_K_params_with_C(self, b, c):
+        key_c = list(c.keys())[0]
+        key_b = list(b.keys())[0]
+        key_list = list(self.group.keys())
+        value_list = list(self.group.values())
+        index_c = key_list.index(key_c)
+        index_b = key_list.index(key_b)
+        p_prim = 0
+        r_prim = value_list[index_c].r
+        q_prim = value_list[index_c].q
+        for i in range(index_c, index_b+1):
+            p_prim += value_list[i].p
+            r_prim = min(value_list[i].r, r_prim)
+            q_prim = min(value_list[i].q, q_prim)
+        return r_prim, p_prim, q_prim
+
+    def recreate_pi_r_c(self, c):
+        key_c = list(c.keys())[0]
+        key_list = list(self.group.keys())
+        value_list = list(self.group.values())
+        index_c = key_list.index(key_c)
+        origin_pi_r_c = value_list[index_c].r
+        return origin_pi_r_c
+
+    def recreate_pi_q_c(self, c):
+        key_c = list(c.keys())[0]
+        key_list = list(self.group.keys())
+        value_list = list(self.group.values())
+        index_c = key_list.index(key_c)
+        origin_pi_q_c = value_list[index_c].q
+        return origin_pi_q_c
 
 class HTask:
     def __init__(self, nr, rpq):
