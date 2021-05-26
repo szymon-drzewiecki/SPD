@@ -40,10 +40,9 @@ def carlier(tg, UB):
 
     return pi
 
-def carlier_without_reccurency(tg):
+def carlier_without_recurrency(tg):
     global _counter
     tg_list = []
-    tg_list.append(tg)
     UB, pi = hschrage(tg)
     b = pi.find_b()
     a = pi.find_a(b)
@@ -54,7 +53,7 @@ def carlier_without_reccurency(tg):
         b = pi.find_b()
         a = pi.find_a(b)
         c = pi.find_c(a, b)
-        tg_list.append(pi)
+        tg_list.append(copy.deepcopy(pi))
         if (c == None):
             break
         K = pi.get_K(c, b)
@@ -64,14 +63,16 @@ def carlier_without_reccurency(tg):
         Kc = pi.get_K(c, b, with_c=True)
         LB = max(sum(K), sum(Kc), LB)
         if LB < UB:
-            tg_list.append(pi)
+            tg_list.append(copy.deepcopy(pi))
             UB = pi.cmax()
         else:
             pi.group[c].r = _tmp
+            _tmp = pi.group[c].q
+            pi.group[c].q = max(pi.group[c].q, K[1] + K[2])
             LB = hschrage_pmtn(pi)
             LB = max(sum(K), sum(Kc), LB)
             if LB < UB:
-                tg_list.append(pi)
+                tg_list.append(copy.deepcopy(pi))
                 UB = pi.cmax()
         pi.group[c].q = _tmp
 
@@ -87,9 +88,9 @@ def carlier_without_reccurency(tg):
     return best_pi
 
 def main():
-    tg = load_data('schrage_data.txt', 0)
-    pi = carlier_without_reccurency(tg)
-    print("Cmax:", pi.cmax())
+    tg = load_data('schrage_data.txt', 7)
+    pi = carlier_without_recurrency(tg)
+    print("final cmax:", pi.cmax(), "final pi:", pi)
 
 
 if __name__ == '__main__':
