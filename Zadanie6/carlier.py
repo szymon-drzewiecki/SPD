@@ -40,10 +40,55 @@ def carlier(tg, UB):
 
     return pi
 
+def carlier_without_reccurency(tg):
+    global _counter
+    tg_list = []
+    tg_list.append(tg)
+    UB, pi = hschrage(tg)
+    b = pi.find_b()
+    a = pi.find_a(b)
+    c = pi.find_c(a, b)
+    while (c != None):
+        _counter += 1
+        print(_counter,". węzeł... Cmax=",pi.cmax(),sep='')
+        b = pi.find_b()
+        a = pi.find_a(b)
+        c = pi.find_c(a, b)
+        tg_list.append(pi)
+        if (c == None):
+            break
+        K = pi.get_K(c, b)
+        _tmp = pi.group[c].r
+        pi.group[c].r = max(pi.group[c].r, K[0] + K[1])
+        LB = hschrage_pmtn(pi)
+        Kc = pi.get_K(c, b, with_c=True)
+        LB = max(sum(K), sum(Kc), LB)
+        if LB < UB:
+            tg_list.append(pi)
+            UB = pi.cmax()
+        else:
+            pi.group[c].r = _tmp
+            LB = hschrage_pmtn(pi)
+            LB = max(sum(K), sum(Kc), LB)
+            if LB < UB:
+                tg_list.append(pi)
+                UB = pi.cmax()
+        pi.group[c].q = _tmp
+
+
+
+    the_best_cmax = 10000000
+    best_pi = {}
+    for task_group in tg_list:
+        print("Cmax=", task_group.cmax())
+        if task_group.cmax() <= the_best_cmax:
+            the_best_cmax = task_group.cmax()
+            best_pi = task_group
+    return best_pi
 
 def main():
-    tg = load_data('schrage_data.txt', 4)
-    pi = carlier(tg, math.inf)
+    tg = load_data('schrage_data.txt', 0)
+    pi = carlier_without_reccurency(tg)
     print("Cmax:", pi.cmax())
 
 
