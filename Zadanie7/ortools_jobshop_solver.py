@@ -14,14 +14,13 @@ def load_jobshop_data(path, instance):
             line = line.replace('\n', '')
             _pwds = [int(i) for i in line.split(' ') if i != '']
             if _pwds:
-                if len(_pwds) == 3 and _counter == instance + 1:
+                if len(_pwds) >= 2 and _counter == instance + 1:
                     emptyList = copy.deepcopy(sublist)
-                    emptyList.append((0,_pwds[0]))
-                    emptyList.append((1,_pwds[1]))
-                    emptyList.append((2,_pwds[2]))
+                    for num in range (len(_pwds)):
+                        emptyList.append((num, _pwds[num]))
                     tasks.append(emptyList)
                     _t_counter += 1
-                elif len(_pwds) < 3:
+                elif len(_pwds) < 2:
                     _counter += 1
 
     return tasks
@@ -33,7 +32,7 @@ def MinimalJobshopSat():
     # Create the model.
     model = cp_model.CpModel()
 
-    jobs_data = load_jobshop_data('rpq.data.txt', 1)
+    jobs_data = load_jobshop_data('jobshop.data.txt', 1)
     print (jobs_data)
     machines_count = 1 + max(task[0] for job in jobs_data for task in job)
     all_machines = range(machines_count)
